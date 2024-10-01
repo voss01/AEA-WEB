@@ -179,7 +179,7 @@ export const ProductVariant = forwardRef<HTMLDivElement, VariantProps>(
                 name="productType"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Select Category      </FormLabel>
+                    <FormLabel>Select Category </FormLabel>
                     <FormControl>
                       <Popover
                         open={open_popOver}
@@ -241,7 +241,6 @@ export const ProductVariant = forwardRef<HTMLDivElement, VariantProps>(
                 )}
               />
 
-              
               <VariantImages />
               <div className="flex gap-4 items-center justify-center">
                 {editMode && variant && (
@@ -265,7 +264,7 @@ export const ProductVariant = forwardRef<HTMLDivElement, VariantProps>(
                   }
                   type="submit"
                 >
-                  {editMode ? "Update Variant" : "Create Variant"}
+                  {editMode ? "Update Category" : "Create Category"}
                 </Button>
               </div>
             </form>
