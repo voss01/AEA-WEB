@@ -82,9 +82,7 @@ const peopleBoard = [
       },
     ],
   },
-  
 ];
-
 
 const peopleDirettivo = [
   {
@@ -164,7 +162,6 @@ const peopleDirettivo = [
   },
 ];
 
-
 const tabs = [
   {
     text: "300+",
@@ -178,9 +175,6 @@ const tabs = [
     text: "10+",
     subtext: "aziende visitate",
   },
-
-  
-
 ];
 
 const SixthSection = () => {
@@ -245,7 +239,9 @@ const SixthSection = () => {
                 <AccordionContent>
                   <div className="grid grid-cols-2 gap-8 mb-6 lg:mb-16 lg:mt-16">
                     {peopleBoard.map((people, index) => (
-                      <div>
+                      <div key={index}>
+                        {" "}
+                        {/* Add key prop here */}
                         {index <= 20 ? (
                           <div className="flex flex-col items-center rounded-lg shadow bg-[#f6f5f4] dark:bg-gray-800 dark:border-gray-700 md:flex-row">
                             <div className="w-full h-full overflow-hidden md:w-1/3">
@@ -292,7 +288,7 @@ const SixthSection = () => {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-              <AccordionTrigger className="text-3xl font-medium text-center xl:text-5xl xl:w-1/2">
+                <AccordionTrigger className="text-3xl font-medium text-center xl:text-5xl xl:w-1/2">
                   <div className="max-w-screen-sm mx-auto text-3xl text-center ">
                     Direttivo
                   </div>
@@ -300,7 +296,9 @@ const SixthSection = () => {
                 <AccordionContent>
                   <div className="grid grid-cols-2 gap-8 mb-6 lg:mb-16 lg:mt-16">
                     {peopleDirettivo.map((people, index) => (
-                      <div>
+                      <div key={index}>
+                        {" "}
+                        {/* Add key prop here */}
                         {index <= 20 ? (
                           <div className="flex flex-col items-center rounded-lg shadow bg-[#f6f5f4] dark:bg-gray-800 dark:border-gray-700 md:flex-row">
                             <div className="w-full h-full overflow-hidden md:w-1/3">
@@ -347,7 +345,6 @@ const SixthSection = () => {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-           
           </div>
         </section>
       </div>

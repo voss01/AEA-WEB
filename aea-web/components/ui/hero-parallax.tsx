@@ -58,12 +58,14 @@ export const HeroParallax = ({
     useTransform(scrollYProgressIncludingOverlap, [0, 0.2], [20, 0]),
     springConfig
   );
-  const translateY = useSpring(
-    isLargeScreen
-      ? useTransform(scrollYProgressIncludingOverlap, [0, 0.2], [-800, 500]) // Start at -700 for large screens
-      : useTransform(scrollYProgressIncludingOverlap, [0, 0.2], [-500, 500]), // Use -400 for smaller screens
-    springConfig
+  // Create separate translateY based on screen size
+  const translateYSpring = useTransform(
+    scrollYProgressIncludingOverlap,
+    [0, 0.2],
+    isLargeScreen ? [-800, 500] : [-500, 500]
   );
+  const translateY = useSpring(translateYSpring, springConfig); // Apply spring to translateY
+
   return (
     <div
       ref={ref}
