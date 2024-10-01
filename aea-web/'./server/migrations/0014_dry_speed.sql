@@ -1,0 +1,1 @@
+ALTER TABLE "variantTags" ALTER COLUMN "tag" DROP NOT NULL;
