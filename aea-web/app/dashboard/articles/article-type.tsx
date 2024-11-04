@@ -253,7 +253,7 @@ export const ProductVariant = forwardRef<HTMLDivElement, VariantProps>(
                       variantAction.execute({ id: variant.id });
                     }}
                   >
-                    Delete Variant
+                    Delete Category
                   </Button>
                 )}
                 <Button

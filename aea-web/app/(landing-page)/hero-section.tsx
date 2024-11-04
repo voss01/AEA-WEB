@@ -226,6 +226,7 @@ const HeroSection = () => {
                     : "shadow-md rounded-xl pt-2  bg-[#f6f5f4] m"
                 }
               `}
+             
               onMouseEnter={() => setActiveTab(tab)}
             >
               <div className="px-4">

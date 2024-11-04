@@ -40,7 +40,7 @@ export default async function DashboardLayout({
 
   return (
 
- <div className="md:flex sm:h-screen">
+ <div className="md:flex">
   <div className="md:flex-grow md:px-12 md:mx-auto md:max-w-6xl">
     <DashboardNav allLinks={allLinks} />
     <div className="md:p-20">{children}</div>
