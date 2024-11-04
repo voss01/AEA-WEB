@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Roboto } from "next/font/google";
+import { Inter, JetBrains_Mono, Roboto } from "next/font/google";
 import "./globals.css";
 import { Outfit } from "next/font/google";
 
@@ -9,7 +9,10 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import Toaster from "@/components/ui/toaster";
 import type { Viewport } from "next";
 import Footer from "@/components/footer";
-const font = Outfit({ subsets: ["latin"] });
+const font =  JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 export const metadata: Metadata = {
   title: "Aea polimi",

@@ -109,27 +109,38 @@ const HeroSection = () => {
 
   return (
     <div className="flex flex-col md:items-center ">
-      <div className="flex justify-center px-8 pt-6 text-5xl font-medium text-center 2xl:w-1/3 md:w-2/3 xl:w-1/2 lg:px-0 xl:text-6xl xl:font-medium xl:pt-14">
-        <div>
-          <a className="text-orange-500">Automation </a>Engineering Association
+      <div className="flex justify-between items-center px-8 pt-6">
+        {/* Left section with larger text occupying 2/3 of the screen */}
+        <div className="w-2/3 text-left xl:text-7xl lg:text-6xl md:text-5xl font-medium">
+          <div>
+            <a className="text-orange-500">Automation </a>Engineering
+            Association
+          </div>
+          {/* Smaller subtext */}
+          <div className="pt-4 text-xl lg:text-2xl">
+            Innovation and robotics for students by students
+          </div>
         </div>
-      </div>
+        {/* Right section with image and button centered */}
+        <div className="w-1/3 flex flex-col items-center">
+          <img
+            src="/arlo/arloHome.png"
+            alt="Descriptive Alt Text"
+            className="w-2/3"
+          />
 
-      <div className="w-2/3 pt-4 mx-auto text-2xl text-center ">
-        Innovation and robotics for students by students
-      </div>
-
-      <div className="flex items-center justify-center gap-4 pt-6">
-        <Link href="https://forms.office.com/Pages/ResponsePage.aspx?id=z6hZgX372UeNMEsbTqkLe9x_hjbou89No8FZoHcG94VUQ0laTlg1TzVaOUU2V0laOEs2U1MzMllMQiQlQCN0PWcu">
-          <Button className="py-1 ">
-            <div className="flex items-center justify-center">
-              <div className="text-lg">Join us</div>
-              <div>
-                <PiArrowRight className="ml-2 " />
+          {/* Centered button under the image */}
+          <Link href="https://forms.office.com/Pages/ResponsePage.aspx?id=z6hZgX372UeNMEsbTqkLe9x_hjbou89No8FZoHcG94VUQ0laTlg1TzVaOUU2V0laOEs2U1MzMllMQiQlQCN0PWcu">
+            <Button className="py-1 mt-4 text-center">
+              <div className="flex items-center justify-center">
+                <div className="text-lg">Join us</div>
+                <div>
+                  <PiArrowRight className="ml-2" />
+                </div>
               </div>
-            </div>
-          </Button>
-        </Link>
+            </Button>
+          </Link>
+        </div>
       </div>
 
       <div className="items-center justify-center pt-10 xl:pt-20"></div>
@@ -258,23 +269,19 @@ const HeroSection = () => {
         </div>
       )}
 
-      {/* Display content based on the active tab */}
-      <div className="hidden md:flex py-10 px-8 md:px-0    lg:w-3/4 2xl:w-[55%]">
+      <div className="hidden md:flex py-10 px-0 w-full">
         {activeTab && (
-          <div className="items-center justify-center w-full space-x-6 md:flex hover:cursor-pointer">
+          <div className="w-full h-[300px] overflow-hidden">
             <Image
               src={activeTab.image}
-              width={500}
-              height={500}
+              width={1920}
+              height={800}
               alt="logo"
               className="
-                w-full
-                h-full
-               
-                shadow-md
-                
-                rounded-xl
-                bg-[#f6f5f4]
+          w-full
+          h-full
+          object-cover
+          object-center
         "
             />
           </div>
