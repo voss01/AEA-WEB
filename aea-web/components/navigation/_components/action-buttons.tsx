@@ -35,7 +35,7 @@ const ActionButtons = () => {
             Log in
           </Button>
         </Link>
-        <Link href={"/contact"}>
+        <Link href={"https://forms.office.com/Pages/ResponsePage.aspx?id=z6hZgX372UeNMEsbTqkLe9x_hjbou89No8FZoHcG94VUQ0laTlg1TzVaOUU2V0laOEs2U1MzMllMQiQlQCN0PWcu"}>
           <Button
           className="hidden lg:block"
           
