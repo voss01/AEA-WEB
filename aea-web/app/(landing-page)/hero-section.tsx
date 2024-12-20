@@ -344,16 +344,12 @@ const HeroSection = () => {
           >
             <span>
             <p>
-  &sol;&sol; let&rsquo;s connect! Join us -- &sol;&sol; let&rsquo;s connect! Join us -- 
-  &sol;&sol; let&rsquo;s connect! Join us -- &sol;&sol; let&rsquo;s connect! Join us --
-  &sol;&sol; let&rsquo;s connect! Join us -- &sol;&sol; let&rsquo;s connect! Join us --
+  // let&rsquo;s connect! Join us -- // let&rsquo;s connect! Join us -- // let&rsquo;s connect! Join us -- // let&rsquo;s connect! Join us -- // let&rsquo;s connect! Join us -- // let&rsquo;s connect! Join us --
 </p>
             </span>
             <span>
             <p>
-    &sol;&sol; let&rsquo;s connect! Join us -- &sol;&sol; let&rsquo;s connect! Join us --
-    &sol;&sol; let&rsquo;s connect! Join us -- &sol;&sol; let&rsquo;s connect! Join us --
-    &sol;&sol; let&rsquo;s connect! Join us -- &sol;&sol; let&rsquo;s connect! Join us --
+            // let&rsquo;s connect! Join us -- // let&rsquo;s connect! Join us -- // let&rsquo;s connect! Join us -- // let&rsquo;s connect! Join us -- // let&rsquo;s connect! Join us -- // let&rsquo;s connect! Join us --
   </p>
             </span>
           </div>
