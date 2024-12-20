@@ -23,7 +23,7 @@ const peopleBoard = [
   {
     heading: {
       text: "Andrea Venezia",
-      image: "images/direttivo/1.png",
+      image: "/images/direttivo/1.png",
       alt: "Andrea Venezia",
     },
     subtext: "Presidente",
@@ -38,7 +38,7 @@ const peopleBoard = [
   {
     heading: {
       text: "Francesco Fornasaro",
-      image: "images/direttivo/2.png",
+      image: "/images/direttivo/2.png",
       alt: "Francesco Fornasaro",
     },
     subtext: "Vicepresidente",
@@ -54,7 +54,7 @@ const peopleBoard = [
   {
     heading: {
       text: "Giovanni Miccio",
-      image: "images/direttivo/8.png",
+      image: "/images/direttivo/8.png",
       alt: "Giovanni Miccio",
     },
     subtext: "Tesoriere",
@@ -134,9 +134,9 @@ const peopleDirettivo = [
     heading: {
       text: "Nicolo Terzoli",
       image: "/images/direttivo/10.png",
-      alt: "Andrea Venezia",
+      alt: "Nicolo Terzoli",
     },
-    subtext: "Nicolo Terzoli",
+    subtext: "Team Progetti",
     description: "",
     listItems: [
       {
