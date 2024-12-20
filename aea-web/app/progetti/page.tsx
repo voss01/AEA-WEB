@@ -1,7 +1,10 @@
 import {
-  PiAirplaneFill,
+PiDrone,
+PiHandPalm,
   PiArrowRight,
-  PiCalendarCheckFill,
+  PiEye,
+  PiDogLight,
+  PiCarProfileBold,
   PiCheckCircleFill,
   PiClipboardLight,
   PiFlag,
@@ -15,80 +18,72 @@ import Image from "next/image";
 const items = [
   {
     icon: <PiHouseFill className="text-2xl text-red-500" />,
-    name: "Company wiki",
+    name: "Il team progetti",
     button: (
       <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
-        Get template <PiArrowRight className="ml-3 text-sm " />
+        Scopri <PiArrowRight className="ml-3 text-sm " />
       </div>
     ),
     image: "/images/company-wiki-template.webp",
   },
   {
-    icon: <PiFlagCheckeredFill className="text-2xl text-sky-600" />,
-    name: "Product roadmap",
+    icon: <PiDrone className="text-2xl text-sky-600" />,
+    name: "FALCO",
     button: (
       <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
-        Get template <PiArrowRight className="ml-3 text-sm " />
+        Scopri <PiArrowRight className="ml-3 text-sm " />
       </div>
     ),
   },
   {
-    icon: <PiCheckCircleFill className="text-2xl text-orange-500" />,
-    name: "OKRs",
+    icon: <PiHandPalm className="text-2xl text-orange-500" />,
+    name: "PROTESI",
     button: (
       <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
-        Get template <PiArrowRight className="ml-3 text-sm " />
+        Scopri <PiArrowRight className="ml-3 text-sm " />
       </div>
     ),
   },
   {
-    icon: <PiClipboardLight className="text-2xl text-green-500" />,
-    name: "Meeting notes",
+    icon: <PiEye className="text-2xl text-green-500" />,
+    name: "COMPUTER VISION",
     button: (
       <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
-        Get template <PiArrowRight className="ml-3 text-sm " />
+        Scopri <PiArrowRight className="ml-3 text-sm " />
       </div>
     ),
   },
   {
-    icon: <PiAirplaneFill className="text-2xl text-red-500" />,
-    name: "Vacation Planner",
+    icon: <PiDogLight className="text-2xl text-red-500" />,
+    name: "ROBOT DOG",
     button: (
       <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
-        Get template <PiArrowRight className="ml-3 text-sm " />
+        Scopri <PiArrowRight className="ml-3 text-sm " />
       </div>
     ),
   },
   {
-    icon: <PiCalendarCheckFill className="text-2xl text-emerald-500" />,
-    name: "Editorial calendar",
+    icon: <PiCarProfileBold className="text-2xl text-emerald-500" />,
+    name: "DUCKIETOWN",
     button: (
       <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
-        Get template <PiArrowRight className="ml-3 text-sm " />
+        Scopri <PiArrowRight className="ml-3 text-sm " />
       </div>
     ),
   },
 
-  {
-    icon: <PiWatchFill className="text-2xl text-indigo-500" />,
-    name: "Habit tracker",
-    button: (
-      <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
-        Get template <PiArrowRight className="ml-3 text-sm " />
-      </div>
-    ),
-  },
+  
 ];
 
-const SeventhSection = () => {
+const Progetti = () => {
   return (
     <>
       <div className="flex flex-col pt-32 items-center justify-center">
         <div className="text-3xl xl:text-5xl font-medium justify-center items-center flex">
-          Endless ways to use it
+         ./Progetti
         </div>
         <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
-          Browse all templates <PiArrowRight className="ml-3 text-sm " />
+          Controlla recruitments <PiArrowRight className="ml-3 text-sm " />
         </div>
       </div>
       <div className="grid xl:grid-cols-4  md:grid-cols-2 md:row-span-1  gap-4  xl:gap-6 mt-8 px-8 md:px-16 xl:px-0 xl:w-3/4  2xl:w-[55%] mx-auto md:w-full">
@@ -136,4 +131,4 @@ const SeventhSection = () => {
   );
 };
 
-export default SeventhSection;
+export default Progetti;

@@ -15,21 +15,22 @@ import { useRouter } from "next/router";
 
 type ProductTypes = {
   variants: VariantsWithProduct[];
+  tag?: string; // Optional tag prop
 };
 
-export default function ProductsCarousel({ variants }: ProductTypes) {
+export default function ProductsCarousel({ variants, tag }: ProductTypes) {
   const params = useSearchParams();
 
   const paramTag = params.get("tag")?.replace(/\//g, ""); // Remove all occurrences of '/'
-
+  const activeTag = tag || paramTag;
   console.log(paramTag); // This will log the value of "tag" without any fragment
 
   const filtered = useMemo(() => {
-    if (paramTag && variants) {
-      return variants.filter((variant) => variant.productType === paramTag);
+    if (activeTag && variants) {
+      return variants.filter((variant) => variant.productType === activeTag);
     }
     return variants; // Return all variants if no paramTag is present
-  }, [paramTag, variants]);
+  }, [activeTag, variants]);
 
   return (
     <div className="px-4">
@@ -40,13 +41,13 @@ export default function ProductsCarousel({ variants }: ProductTypes) {
         opts={{
           align: "start",
         }}
-        className="w-full max-w-7xl mx-auto mb-8" // Increased max width
+        className="w-full max-w-7xl mx-auto mb-2" // Increased max width
       >
         <CarouselContent>
           {filtered.map((variant) => (
             <CarouselItem
               key={variant.id}
-              className="md:basis-1/2 lg:basis-1/3" // Control item size based on screen size
+              className="md:basis-1/2 lg:basis-1/3 space-x-1" // Further reduced space between items with `space-x-1`
             >
               <Link
                 href={`/article/${variant.id}?id=${variant.id}&articleID=${variant.productID}&title=${variant.product.title}&type=${variant.productType}&image=${variant.variantImages[0].url}`}
@@ -56,7 +57,7 @@ export default function ProductsCarousel({ variants }: ProductTypes) {
                     <CardContent className="flex flex-col h-full p-0">
                       {/* Image at the top */}
                       <Image
-                        className="rounded-t-md w-full h-48 object-cover" // Make image fill the width and maintain aspect ratio
+                        className="rounded-t-md w-full h-48 object-cover pt-4 pl-6 pb-4 pr-0" // Make image fill the width and maintain aspect ratio
                         src={variant.variantImages[0].url}
                         width={720}
                         height={480}

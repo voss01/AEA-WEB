@@ -53,9 +53,11 @@ const tabs = [
     name: "Progetti",
     description: "Applica ciò che hai imparato a lezione",
     more: (
+      <Link href="/progetti">
       <div className="flex items-center text-red-600">
         Scopri <PiArrowRight className="ml-1 text-sm" />
       </div>
+      </Link>
     ),
     image: "/assets/progetti.jpeg",
   },
@@ -109,43 +111,72 @@ const HeroSection = () => {
 
   return (
     <div className="flex flex-col md:items-center ">
-      <div className="flex justify-between items-center px-8 pt-6">
-        {/* Left section with larger text occupying 2/3 of the screen */}
-        <div className="w-2/3 text-left xl:text-7xl lg:text-6xl md:text-5xl font-medium">
-          <div>
-            <a className="text-orange-500">Automation </a>Engineering
-            Association
-          </div>
-          {/* Smaller subtext */}
-          <div className="pt-4 text-xl lg:text-2xl">
-            Innovation and robotics for students by students
-          </div>
-        </div>
-        {/* Right section with image and button centered */}
-        <div className="w-1/3 flex flex-col items-center">
-          <img
-            src="/arlo/arloHome.png"
-            alt="Descriptive Alt Text"
-            className="w-2/3"
-          />
 
-          {/* Centered button under the image */}
-          <Link href="https://forms.office.com/Pages/ResponsePage.aspx?id=z6hZgX372UeNMEsbTqkLe9x_hjbou89No8FZoHcG94VUQ0laTlg1TzVaOUU2V0laOEs2U1MzMllMQiQlQCN0PWcu">
-            <Button className="py-1 mt-4 text-center">
-              <div className="flex items-center justify-center">
-                <div className="text-lg">Join us</div>
-                <div>
-                  <PiArrowRight className="ml-2" />
-                </div>
-              </div>
-            </Button>
-          </Link>
+
+    <div className="flex justify-center px-8 pt-2 mt-12">
+
+
+      <div className="flex w-3/4">
+        
+      <div className="flex justify-center px-8 pt-2">
+        <div className="flex w-2/3">
+          <div className="w-1/2 text-left xl:text-8xl lg:text-8xl md:text-3xl font-medium">
+            <div>
+              <a className="text-orange-500">Automation </a>Engineering Association
+            </div>
+            <div className="pt-2 text-sm lg:text-sm flex flex-row whitespace-nowrap">
+              Innovation and robotics for students by students
+            </div>
+
+          </div>
         </div>
+      </div>
+
+
+      <div className="flex justify-center px-8 pt-2">
+        <div className="flex w-2/3">
+          <div className="w-1/2 text-left xl:text-5xl lg:text-4xl md:text-3xl font-medium">
+            {/* Text content */}
+          </div>
+          <div className="w-1/2 flex flex-col items-center">
+            <img
+              src="/arlo/arloHome.png"
+              alt="Descriptive Alt Text"
+              className="min-w-[200px] h-auto" 
+            />
+            <Link href="https://forms.office.com/...">
+              <Button className="py-1 mt-2 text-center">
+                <div className="flex items-center justify-center">
+                  <div className="text-lg">Join us</div>
+                  <div><PiArrowRight className="ml-2" /></div>
+                </div>
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      </div>
+
+
+    
+
+
+
+
       </div>
 
       <div className="items-center justify-center pt-10 xl:pt-20"></div>
       {isSmallScreen ? (
+   
         <div className="px-8">
+          
+          {/* Mobile view */}
+
           <div className="grid grid-cols-4 gap-4 mt-8 md:row-span-1 xl:gap-6 xl:px-0 ">
             {tabs.map((tab) => (
               <motion.div
@@ -206,66 +237,76 @@ const HeroSection = () => {
           </div>
         </div>
       ) : (
+
+
+        
         <div className="flex  xl:space-x-4 items-center justify-between hover:cursor-pointer gap-4 w-4/5 xl:w-3/4 2xl:w-[55%]">
+            {/* DESKTOP view */}
           {tabs.map((tab) => (
-            <motion.div
-              key={tab.name}
-              className={`
-                xl:flex 
-                justify-center 
-                space-x-4
-                xl:pt-4
-                sm:my-10
-               
-                xl:my-0
-                w-60
-                h-36
-                ${
-                  activeTab === tab
-                    ? "border rounded-xl pt-2 bg-white "
-                    : "shadow-md rounded-xl pt-2  bg-[#f6f5f4] m"
-                }
-              `}
-             
-              onMouseEnter={() => setActiveTab(tab)}
-            >
-              <div className="px-4">
-                <div className="flex items-center">
-                  <div>{tab.icon}</div>
-                  <div className="text-2xl font-medium">{tab.name}</div>
-
-                  {/* Render feature tag only for "AI" tab */}
-                  {tab.name === ".." && (
-                    <div className="px-2 py-1 ml-2 text-xs font-medium text-purple-600 bg-purple-100 rounded-full">
-                      {tab.feature}
-                    </div>
-                  )}
-                </div>
-
-                <motion.div
-                  className="flex flex-col text-sm"
-                  initial={{ y: 0 }}
-                  animate={{ y: activeTab === tab ? 10 : 25 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <div>
-                    {/* Only animate the description */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      {tab.description}
-                    </motion.div>
-                  </div>
-
-                  {/* Conditional rendering for "Learn more" link */}
-                  {activeTab === tab && (
-                    <div className="mt-2 text-sm">{tab.more}</div>
-                  )}
-                </motion.div>
-              </div>
-            </motion.div>
+             <motion.div
+             key={tab.name}
+             className={`
+               xl:flex 
+               justify-center 
+               space-x-4
+               xl:pt-4
+               sm:my-10
+               xl:my-0
+               w-72
+               h-48
+               relative
+               ${activeTab === tab
+                 ? ""
+                 : ""
+               }
+             `}
+             onMouseEnter={() => setActiveTab(tab)}
+           >
+             {/* SVG background for the border */}
+             <div className="absolute inset-0">
+               <svg
+                 width="236"
+                 height="163"
+                 viewBox="0 0 236 163"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg"
+                 className="w-full h-full absolute top-0 left-0"
+               >
+                 <path
+                   d="M0.5 162.5V0.5H42C50.4 0.5 69 0.5 69 7.5H235V162.5H0.5Z"
+                   stroke="#1F1F1F"
+                 />
+               </svg>
+             </div>
+       
+             <div className="px-4 relative z-10 mt-4"> {/* Increased margin-top here */}
+               <div className="flex items-center">
+                 <div>{tab.icon}</div>
+                 <div className="text-2xl font-medium">{tab.name}</div>
+               </div>
+       
+               <motion.div
+                 className="flex flex-col text-sm"
+                 initial={{ y: 0 }}
+                 animate={{ y: activeTab === tab ? 10 : 25 }}
+                 transition={{ duration: 0.2 }}
+               >
+                 <div>
+                   <motion.div
+                     initial={{ opacity: 0, y: 10 }}
+                     animate={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.3 }}
+                   >
+                     {tab.description}
+                   </motion.div>
+                 </div>
+       
+                 {activeTab === tab && (
+                   <div className="mt-2 text-sm">{tab.more}</div>
+                 )}
+               </motion.div>
+             </div>
+           </motion.div>
           ))}
         </div>
       )}
@@ -288,7 +329,52 @@ const HeroSection = () => {
           </div>
         )}
       </div>
+
+
+      {/* Scrolling text */}
+      <div className="w-full py-2 mt-4"> {/* Reduced padding to bring it closer to image */}
+        {/* Add the lines on top and bottom */}
+        <div className="border-t border-gray-600 mb-2"></div>
+        <div className="overflow-hidden">
+          <div
+            className="animate-marquee whitespace-nowrap overflow-hidden text-gray-600"
+            style={{
+              animation: "marquee 130s linear infinite",
+            }}
+          >
+            <span>
+              // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- 
+     
+            </span>
+            <span>
+              // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- 
+
+            </span>
+          </div>
+        </div>
+        <div className="border-b  border-gray-600"></div>
+      </div>
+
+      <style jsx>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
+        .animate-marquee {
+          display: inline-block;
+        }
+      `}</style>
+    
     </div>
+
+
+
+
   );
 };
 

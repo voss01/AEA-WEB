@@ -18,7 +18,7 @@ const GetStartedFree = () => {
         </div>
 
         <Image
-            src="/assets/doodlerobot.svg"
+            src="/arlo/arloHome.png"
             alt="hero image"
             width={1000}
             height={1000}
