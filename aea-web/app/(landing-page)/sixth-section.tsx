@@ -22,9 +22,9 @@ const font = Lora({
 const peopleBoard = [
   {
     heading: {
-      text: "Elia Raimondi",
-      image: "images/direttivo/Elia.jpg",
-      alt: "Elia Raimondi",
+      text: "Andrea Venezia",
+      image: "images/direttivo/1.png",
+      alt: "Andrea Venezia",
     },
     subtext: "Presidente",
     description: "",
@@ -37,9 +37,9 @@ const peopleBoard = [
   },
   {
     heading: {
-      text: "Riccardo Tellarini",
-      image: "images/direttivo/Riccardo.jpg",
-      alt: "Riccardo Tellarini",
+      text: "Francesco Fornasaro",
+      image: "images/direttivo/2.png",
+      alt: "Francesco Fornasaro",
     },
     subtext: "Vicepresidente",
     description: "",
@@ -54,7 +54,7 @@ const peopleBoard = [
   {
     heading: {
       text: "Giovanni Miccio",
-      image: "images/direttivo/Giovanni.jpg",
+      image: "images/direttivo/8.png",
       alt: "Giovanni Miccio",
     },
     subtext: "Tesoriere",
@@ -70,7 +70,7 @@ const peopleBoard = [
   {
     heading: {
       text: "Gabriele Stabile",
-      image: "images/direttivo/Gabriele.jpg",
+      image: "/images/direttivo/6.png",
       alt: "Gabriele Stabile",
     },
     subtext: "Segretario",
@@ -88,7 +88,7 @@ const peopleDirettivo = [
   {
     heading: {
       text: "Gabriel Voss",
-      image: "images/direttivo/Gabriel.jpg",
+      image: "/images/direttivo/3.png",
       alt: "Gabriel Voss",
     },
     subtext: "Dev Ops",
@@ -102,9 +102,9 @@ const peopleDirettivo = [
   },
   {
     heading: {
-      text: "Lorenzo Rocco",
-      image: "images/direttivo/Lorenzo.jpg",
-      alt: "Lorenzo Rocco",
+      text: "Oscar Lovato",
+      image: "/images/direttivo/9.png",
+      alt: "Oscar Lovato",
     },
     subtext: "Team Aziende",
     description: "",
@@ -118,7 +118,7 @@ const peopleDirettivo = [
   {
     heading: {
       text: "Eleonora",
-      image: "images/direttivo/Eleonora.jpg",
+      image: "/images/direttivo/5.png",
       alt: "Eleonora",
     },
     subtext: "Team Contenuti",
@@ -132,11 +132,11 @@ const peopleDirettivo = [
   },
   {
     heading: {
-      text: "Andrea Venezia",
-      image: "images/direttivo/Andrea.jpg",
+      text: "Nicolo Terzoli",
+      image: "/images/direttivo/10.png",
       alt: "Andrea Venezia",
     },
-    subtext: "Team Progetti",
+    subtext: "Nicolo Terzoli",
     description: "",
     listItems: [
       {
@@ -147,9 +147,9 @@ const peopleDirettivo = [
   },
   {
     heading: {
-      text: "Alberto",
-      image: "images/direttivo/Alberto.jpg",
-      alt: "Alberto",
+      text: "Gabriele",
+      image: "/images/direttivo/7.png",
+      alt: "Gabriele",
     },
     subtext: "Team Eventi",
     description: "",

@@ -175,7 +175,7 @@ const HeroSection = () => {
    
         <div className="px-8">
           
-          {/* Mobile view */}
+  
 
           <div className="grid grid-cols-4 gap-4 mt-8 md:row-span-1 xl:gap-6 xl:px-0 ">
             {tabs.map((tab) => (
@@ -241,7 +241,7 @@ const HeroSection = () => {
 
         
         <div className="flex  xl:space-x-4 items-center justify-between hover:cursor-pointer gap-4 w-4/5 xl:w-3/4 2xl:w-[55%]">
-            {/* DESKTOP view */}
+        
           {tabs.map((tab) => (
              <motion.div
              key={tab.name}
@@ -343,12 +343,18 @@ const HeroSection = () => {
             }}
           >
             <span>
-              // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- 
-     
+            <p>
+  &sol;&sol; let&rsquo;s connect! Join us -- &sol;&sol; let&rsquo;s connect! Join us -- 
+  &sol;&sol; let&rsquo;s connect! Join us -- &sol;&sol; let&rsquo;s connect! Join us --
+  &sol;&sol; let&rsquo;s connect! Join us -- &sol;&sol; let&rsquo;s connect! Join us --
+</p>
             </span>
             <span>
-              // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- // let’s connect! Join us -- 
-
+            <p>
+    &sol;&sol; let&rsquo;s connect! Join us -- &sol;&sol; let&rsquo;s connect! Join us --
+    &sol;&sol; let&rsquo;s connect! Join us -- &sol;&sol; let&rsquo;s connect! Join us --
+    &sol;&sol; let&rsquo;s connect! Join us -- &sol;&sol; let&rsquo;s connect! Join us --
+  </p>
             </span>
           </div>
         </div>
