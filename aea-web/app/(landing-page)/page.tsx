@@ -28,7 +28,7 @@ export default async function LandingPage() {
  
 
   return (
-    <div className="">
+    <div className="overflow-x-hidden">
       <HeroSection />
 
       <NewsSection />
