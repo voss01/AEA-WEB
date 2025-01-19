@@ -19,28 +19,21 @@ export default async function NewsSection() {
       
     <div className="flex flex-col  justify-center pt-16">
    
-      {/* Outer Section Divided into 3 Equal Parts */}
-      <div className="flex w-full max-w-7xl mb-8">
-        {/* Left Cell - Empty space (1/3) */}
-        <div className="flex-1"></div>
+{/* Middle Cell - Image (1/3) */}
+<div className="flex-1 flex justify-center">
+  <Image
+    src="/arlo/arloNews.png" // Replace with your image path
+    alt="News Image"
+    width={150} // Reduced width
+    height={100} // Reduced height
+    className="object-cover rounded-lg"
+  />
+</div>
 
-        {/* Middle Cell - Image (1/3) */}
-        <div className="flex-1 flex justify-center">
-          <Image
-            src="/arlo/arloNews.png" // Replace with your image path
-            alt="News Image"
-            width={200} // Adjust width as needed
-            height={150} // Adjust height as needed
-            className="object-cover rounded-lg"
-          />
-        </div>
-       
-
-        {/* Right Cell - ./News Text (1/3) */}
-        <div className="flex-1 text-8xl font-bold xl:text-9xl flex justify-center items-center">
-          ./News
-        </div>
-      </div>
+{/* Right Cell - ./News Text (1/3) */}
+<div className="flex-1 font-bold flex justify-center items-center">
+  <span className="text-7xl md:text-8xl xl:text-9xl">./News</span>
+</div>
 
       {/* Additional Content (Product Tags and Carousel) */}
    

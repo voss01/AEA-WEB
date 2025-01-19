@@ -116,54 +116,66 @@ const HeroSection = () => {
     <div className="flex justify-center px-8 pt-2 mt-12">
 
 
-      <div className="flex w-3/4">
-        
-      <div className="flex justify-center px-8 pt-2">
-        <div className="flex w-2/3">
-          <div className="w-1/2 text-left xl:text-8xl lg:text-8xl md:text-3xl font-medium">
-            <div>
-              <a className="text-orange-500">Automation </a>Engineering Association
-            </div>
-            <div className="pt-2 text-sm lg:text-sm flex flex-row whitespace-nowrap">
-              Innovation and robotics for students by students
-            </div>
 
-          </div>
+
+
+    <div className="flex w-3/4">
+  {/* Content for larger screens */}
+  <div className="hidden md:flex justify-center px-8 pt-2">
+    <div className="flex w-2/3">
+      <div className="w-1/2 text-left xl:text-8xl lg:text-8xl md:text-3xl font-medium">
+        <div>
+          <a className="text-orange-500">Automation </a>Engineering Association
+        </div>
+        <div className="pt-2 text-sm lg:text-sm flex flex-row whitespace-nowrap">
+          Innovation and robotics for students by students
         </div>
       </div>
+    </div>
+  </div>
 
+  <div className="hidden md:flex justify-center px-8 pt-2">
+    <div className="flex w-2/3">
+      <div className="w-1/2 text-left xl:text-5xl lg:text-4xl md:text-3xl font-medium">
+        {/* Text content */}
+      </div>
+      <div className="w-1/2 flex flex-col items-center">
+        <img
+          src="/arlo/arloHome.png"
+          alt="Descriptive Alt Text"
+          className="min-w-[200px] h-auto"
+        />
+        <Link href="https://forms.office.com/Pages/ResponsePage.aspx?id=z6hZgX372UeNMEsbTqkLe9x_hjbou89No8FZoHcG94VUQ0laTlg1TzVaOUU2V0laOEs2U1MzMllMQiQlQCN0PWcu">
+          <Button className="py-1 mt-2 text-center">
+            <div className="flex items-center justify-center">
+              <div className="text-lg">Join us</div>
+              <div>
+                <PiArrowRight className="ml-2" />
+              </div>
+            </div>
+          </Button>
+        </Link>
+      </div>
+    </div>
+  </div>
 
-      <div className="flex justify-center px-8 pt-2">
-        <div className="flex w-2/3">
-          <div className="w-1/2 text-left xl:text-5xl lg:text-4xl md:text-3xl font-medium">
-            {/* Text content */}
-          </div>
-          <div className="w-1/2 flex flex-col items-center">
-            <img
-              src="/arlo/arloHome.png"
-              alt="Descriptive Alt Text"
-              className="min-w-[200px] h-auto" 
-            />
-            <Link href="https://forms.office.com/Pages/ResponsePage.aspx?id=z6hZgX372UeNMEsbTqkLe9x_hjbou89No8FZoHcG94VUQ0laTlg1TzVaOUU2V0laOEs2U1MzMllMQiQlQCN0PWcu">
-              <Button className="py-1 mt-2 text-center">
-                <div className="flex items-center justify-center">
-                  <div className="text-lg">Join us</div>
-                  <div><PiArrowRight className="ml-2" /></div>
-                </div>
-              </Button>
-            </Link>
+  {/* Content for smaller screens */}
+  <div className="flex flex-col md:hidden w-full text-center">
+    <div className="text-2xl font-bold text-orange-500">Automation</div>
+    <div className="text-xl font-medium">Engineering Association</div>
+    <div className="mt-2 text-sm">Innovation and robotics for students by students</div>
+    <Link href="https://forms.office.com/Pages/ResponsePage.aspx?id=z6hZgX372UeNMEsbTqkLe9x_hjbou89No8FZoHcG94VUQ0laTlg1TzVaOUU2V0laOEs2U1MzMllMQiQlQCN0PWcu">
+      <Button className="py-1 mt-4 text-center mx-auto">
+        <div className="flex items-center justify-center">
+          <div className="text-lg">Join us</div>
+          <div>
+            <PiArrowRight className="ml-2" />
           </div>
         </div>
-      </div>
-
-
-
-
-
-      </div>
-
-
-    
+      </Button>
+    </Link>
+  </div>
+</div>
 
 
 
@@ -172,72 +184,62 @@ const HeroSection = () => {
 
       <div className="items-center justify-center pt-10 xl:pt-20"></div>
       {isSmallScreen ? (
-   
-        <div className="px-8">
-          
-  
+  <div className="px-8">
+   <div className="grid grid-cols-4 gap-4 mt-8 md:row-span-1 xl:gap-6 xl:px-0">
+  {tabs.map((tab) => (
+    <motion.div
+      key={tab.name}
+      className={`
+        flex
+        p-1
+        md:p-8
+        cursor-pointer
+        ${
+          activeTab.name === tab.name
+            ? "bg-[#f6f5f4] md:bg-white border-gray-200 md:border"
+            : "md:bg-[#f6f5f4] hover:bg-[#eae7e7]"
+        }
+        rounded-tl-xl rounded-tr-none rounded-bl-none rounded-br-none
+        items-center justify-center
+      `}
+      onClick={() => setActiveTab(tab)}
+    >
+      <div className="flex flex-col items-center mx-auto md:justify-center">
+        <div className="hidden text-4xl md:flex">{tab.icon}</div>
+        <div className="mt-1 text-sm font-medium xl:text-lg">{tab.name}</div>
+      </div>
+    </motion.div>
+  ))}
+</div>
 
-          <div className="grid grid-cols-4 gap-4 mt-8 md:row-span-1 xl:gap-6 xl:px-0 ">
-            {tabs.map((tab) => (
-              <motion.div
-                key={tab.name}
-                className={`
-              flex 
-            p-1
-              md:p-8
-             
-      
-                cursor-pointer
-        
-                ${
-                  activeTab.name === tab.name
-                    ? "rounded-md md:rounded-xl bg-[#f6f5f4]  md:bg-white border-gray-200 md:border items-center justify-center flex p-1 "
-                    : "md:bg-[#f6f5f4]   rounded-md xl:rounded-xl p-1 items-center justify-center hover:bg-[#eae7e7] "
-                } `}
-                onClick={() => setActiveTab(tab)}
-              >
-                <div className="flex flex-col items-center mx-auto md:justify-center">
-                  <div className="hidden text-4xl md:flex">{tab.icon}</div>
-                  <div className="mt-1 text-sm font-medium xl:text-lg">
-                    {tab.name}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Display content based on the active tab */}
-          <div className="w-full pt-6 md:py-10 lg:px-16 xl:px-0 md:px-16 ">
-            {activeTab && (
-              <div className="flex flex-col items-center justify-center ">
-                <Image
-                  src={activeTab.image}
-                  width={1025}
-                  height={500}
-                  alt="logo"
-                  className="
-                  w-full
-                  h-full
-                 
-                
-                  
-                  rounded-xl
-                  bg-[#f6f5f4]
+    {/* Display content based on the active tab */}
+    <div className="w-full pt-6 md:py-10 lg:px-16 xl:px-0 md:px-16">
+      {activeTab && (
+        <div className="flex flex-col items-center justify-center">
+          <Image
+            src={activeTab.image}
+            width={1025}
+            height={500}
+            alt="logo"
+            className="
+              w-full
+              h-full
+              rounded-xl
+              bg-[#f6f5f4]
             "
-                />
-                <div className="mt-5">
-                  <Link href="/aziende">
-                    <div className="flex items-center text-blue-600">
-                      Scopri <PiArrowRight className="ml-1 text-sm" />
-                    </div>
-                  </Link>
-                </div>
+          />
+          <div className="mt-5">
+            <Link href={`/${activeTab.name.toLowerCase()}`}>
+              <div className="flex items-center text-blue-600">
+                Scopri <PiArrowRight className="ml-1 text-sm" />
               </div>
-            )}
+            </Link>
           </div>
         </div>
-      ) : (
-
+      )}
+    </div>
+  </div>
+) : (
 
         
         <div className="flex  xl:space-x-4 items-center justify-between hover:cursor-pointer gap-4 w-4/5 xl:w-3/4 2xl:w-[55%]">

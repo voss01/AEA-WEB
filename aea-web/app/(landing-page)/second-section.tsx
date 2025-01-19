@@ -29,7 +29,7 @@ const SecondSection = () => {
           href="/blog?tag=news"
           className="flex items-center text-sky-500 hover:underline hover:cursor-pointer"
         >
-          Scopri le visite in azienda più recenti
+          Scopri
           <PiArrowRight className="ml-3 text-sm " />
         </Link>
       </div>
