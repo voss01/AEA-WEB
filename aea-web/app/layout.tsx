@@ -9,6 +9,7 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import Toaster from "@/components/ui/toaster";
 import type { Viewport } from "next";
 import Footer from "@/components/footer";
+import { Analytics } from '@vercel/analytics/next';
 const font =  JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400"],
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Toaster />
 
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
