@@ -10,6 +10,7 @@ import Toaster from "@/components/ui/toaster";
 import type { Viewport } from "next";
 import Footer from "@/components/footer";
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const font =  JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400"],
@@ -40,6 +41,7 @@ export default function RootLayout({
 
         {children}
         <Analytics />
+        <SpeedInsights />
         <Footer />
       </body>
     </html>
