@@ -113,8 +113,7 @@ const HeroSection = () => {
     <div className="flex flex-col md:items-center ">
 
 
-    <div className="flex justify-center px-8 pt-2 mt-12">
-
+<div className="flex justify-start md:justify-center px-4 md:px-8 pt-2 mt-12">
 
 
 
@@ -160,7 +159,7 @@ const HeroSection = () => {
   </div>
 
 {/* Content for smaller screens */}
-<div className="flex flex-col md:hidden w-full text-left">
+<div className="flex flex-col md:hidden w-full text-left items-start">
   <div className="text-5xl text-orange-500">Automation</div>
   <div className="text-5xl font-medium">Engineering Association</div>
   <div className="mt-2 text-base">Innovation and robotics for students by students</div>
