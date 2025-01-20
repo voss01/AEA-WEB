@@ -1,6 +1,8 @@
 
 import { PiArrowRight } from "react-icons/pi";
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 
 const GetStartedFree = () => {
@@ -13,9 +15,17 @@ const GetStartedFree = () => {
         <div className="px-10 py-4 text-center xl:w-1/3">
          Unisciti a noi proponi idee e svolgi progetti
         </div>
-        <div className="flex items-center text-sky-500 hover:underline hover:cursor-pointer">
-          Join Us <PiArrowRight className="ml-3 text-sm " />
-        </div>
+     
+
+        <div>
+        <Link href={"https://forms.office.com/Pages/ResponsePage.aspx?id=z6hZgX372UeNMEsbTqkLe9x_hjbou89No8FZoHcG94VUQ0laTlg1TzVaOUU2V0laOEs2U1MzMllMQiQlQCN0PWcu"}
+          className="flex items-center text-sky-500 hover:underline hover:cursor-pointer"
+        >
+          Join us
+          <PiArrowRight className="ml-3 text-sm " />
+        </Link>
+      </div>
+    
 
         <Image
             src="/arlo/arloHome.png"
