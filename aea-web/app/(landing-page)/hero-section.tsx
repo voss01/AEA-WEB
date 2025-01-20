@@ -161,8 +161,8 @@ const HeroSection = () => {
 
 {/* Content for smaller screens */}
 <div className="flex flex-col md:hidden w-full text-left">
-  <div className="text-3xl font-bold text-orange-500">Automation</div>
-  <div className="text-2xl font-medium">Engineering Association</div>
+  <div className="text-5xl text-orange-500">Automation</div>
+  <div className="text-5xl font-medium">Engineering Association</div>
   <div className="mt-2 text-base">Innovation and robotics for students by students</div>
   <Link href="https://forms.office.com/Pages/ResponsePage.aspx?id=z6hZgX372UeNMEsbTqkLe9x_hjbou89No8FZoHcG94VUQ0laTlg1TzVaOUU2V0laOEs2U1MzMllMQiQlQCN0PWcu">
     <Button className="py-2 mt-4 text-center mx-auto">
