@@ -16,6 +16,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/it',  // Path you want to redirect from
+        destination: 'https://www.aeapolimi.it',  // New destination URL
+        permanent: true,  // Permanent redirect (301)
+      },
+    ];
+  },
 };
 
 export default nextConfig;

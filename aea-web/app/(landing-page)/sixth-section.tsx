@@ -30,8 +30,8 @@ const peopleBoard = [
     description: "",
     listItems: [
       {
-        url: "#",
-        icon: "icons/linkedin.webp",
+        url: "https://www.linkedin.com/in/andrea-venezia-2b3294263/",
+        icon: "/icons/linkedin.webp",
       },
     ],
   },
@@ -46,7 +46,7 @@ const peopleBoard = [
     listItems: [
       {
         url: "#",
-        icon: "icons/linkedin.webp",
+        icon: "/icons/linkedin.webp",
       },
     ],
   },
@@ -61,8 +61,8 @@ const peopleBoard = [
     description: "",
     listItems: [
       {
-        url: "#",
-        icon: "icons/linkedin.webp",
+        url: "https://www.linkedin.com/in/giovanni-miccio-6aa49a19a/",
+        icon: "/icons/linkedin.webp",
       },
     ],
   },
@@ -78,7 +78,7 @@ const peopleBoard = [
     listItems: [
       {
         url: "#",
-        icon: "icons/linkedin.webp",
+        icon: "/icons/linkedin.webp",
       },
     ],
   },
@@ -95,8 +95,8 @@ const peopleDirettivo = [
     description: "",
     listItems: [
       {
-        url: "#",
-        icon: "icons/linkedin.webp",
+        url: "https://www.linkedin.com/in/gabriel-voss-256501181",
+        icon: "/icons/linkedin.webp",
       },
     ],
   },
@@ -111,13 +111,13 @@ const peopleDirettivo = [
     listItems: [
       {
         url: "#",
-        icon: "icons/linkedin.webp",
+        icon: "/icons/linkedin.webp",
       },
     ],
   },
   {
     heading: {
-      text: "Eleonora",
+      text: "Eleonora Telasi",
       image: "/images/direttivo/5.png",
       alt: "Eleonora",
     },
@@ -125,8 +125,8 @@ const peopleDirettivo = [
     description: "",
     listItems: [
       {
-        url: "#",
-        icon: "icons/linkedin.webp",
+        url: "https://www.linkedin.com/in/eleonora-telasi-493035259/",
+        icon: "/icons/linkedin.webp",
       },
     ],
   },
@@ -141,7 +141,7 @@ const peopleDirettivo = [
     listItems: [
       {
         url: "#",
-        icon: "icons/linkedin.webp",
+        icon: "/icons/linkedin.webp",
       },
     ],
   },
@@ -156,7 +156,7 @@ const peopleDirettivo = [
     listItems: [
       {
         url: "#",
-        icon: "icons/linkedin.webp",
+        icon: "/icons/linkedin.webp",
       },
     ],
   },
@@ -164,7 +164,7 @@ const peopleDirettivo = [
 
 const tabs = [
   {
-    text: "300+",
+    text: "400+",
     subtext: "associati",
   },
   {
