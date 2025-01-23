@@ -162,6 +162,27 @@ const peopleDirettivo = [
   },
 ];
 
+
+const peopleHr = [
+
+  
+  {
+    heading: {
+      text: "Costanza Marafante",
+      image: "/images/direttivo/4.png",
+      alt: "Costanza Marafante",
+    },
+    subtext: "Hr",
+    description: "",
+    listItems: [
+      {
+        url: "https://it.linkedin.com/in/costanza-marafante?trk=people-guest_people_search-card",
+        icon: "/icons/linkedin.webp",
+      },
+    ],
+  },
+];
+
 const tabs = [
   {
     text: "400+",
@@ -228,7 +249,7 @@ const SixthSection = () => {
             <Accordion
               type="multiple"
               className="w-full"
-              defaultValue={["item-1", "item-2"]}
+              defaultValue={["item-1", "item-2", "item-3"]}
             >
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-3xl font-medium text-center xl:text-5xl xl:w-1/2">
@@ -296,6 +317,64 @@ const SixthSection = () => {
                 <AccordionContent>
                   <div className="grid grid-cols-2 gap-8 mb-6 lg:mb-16 lg:mt-16">
                     {peopleDirettivo.map((people, index) => (
+                      <div key={index}>
+                        {" "}
+                        {/* Add key prop here */}
+                        {index <= 20 ? (
+                          <div className="flex flex-col items-center rounded-lg shadow bg-[#f6f5f4] dark:bg-gray-800 dark:border-gray-700 md:flex-row">
+                            <div className="w-full h-full overflow-hidden md:w-1/3">
+                              {" "}
+                              <img
+                                className="object-cover w-full h-full rounded-lg sm:rounded-none sm:rounded-l-lg"
+                                src={people.heading.image}
+                                alt={people.heading.alt}
+                              />
+                            </div>
+                            <div className="p-5 sm:order-2">
+                              {" "}
+                              <h3 className="font-bold tracking-tight text-gray-900 dark:text-white">
+                                <div>{people.heading.text}</div>
+                              </h3>
+                              <span className="text-gray-500 dark:text-gray-400">
+                                {people.subtext}
+                              </span>
+                              <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
+                                {people.description}
+                              </p>
+                              <ul className="flex space-x-4 sm:mt-0">
+                                {people.listItems.map((item, index) => (
+                                  <li key={index}>
+                                    <a
+                                      href={item.url}
+                                      className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                                    >
+                                      <img
+                                        src={item.icon}
+                                        alt={`Icon ${index + 1}`}
+                                        className="w-5 h-5"
+                                      />
+                                    </a>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>
+                        ) : null}
+                      </div>
+                    ))}
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3">
+                <AccordionTrigger className="text-3xl font-medium text-center xl:text-5xl xl:w-1/2">
+                  <div className="max-w-screen-sm mx-auto text-3xl text-center ">
+                    Human Resources
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <div className="grid grid-cols-2 gap-8 mb-6 lg:mb-16 lg:mt-16">
+                    {peopleHr.map((people, index) => (
                       <div key={index}>
                         {" "}
                         {/* Add key prop here */}
