@@ -70,7 +70,7 @@ export default function Welcome() {
               </div>
               <h3 className="text-lg font-semibold">Paga la tassa di 10€</h3>
               <p className="text-gray-500 text-sm">
-                Con Paypal, per "familiari e amici".
+                Con Paypal, per familiari e amici.
               </p>
               <Link
   href="https://paypal.me/giomiccio?country.x=IT&locale.x=it_IT"
