@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {  PiFacebookLogoFill, PiInstagramLogo, PiInstagramLogoFill, PiLinkedinLogoFill, PiTwitterLogoFill, PiYoutubeLogoFill } from "react-icons/pi";
 
 const Footer = () => {
@@ -44,8 +45,9 @@ const Footer = () => {
                         <div className="flex flex-col space-y-6 ">
                             <div className="pt-10 font-medium">PER STUDENTI</div>
                             <div className="space-y-4 text-sm font-light">
-
+                            <Link href="/welcome">
                             <div>JoinUs</div>
+                            </Link>
                             <div>Progetti</div>
                      
                             </div>

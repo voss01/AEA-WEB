@@ -144,7 +144,7 @@ const HeroSection = () => {
           alt="Descriptive Alt Text"
           className="min-w-[200px] h-auto"
         />
-        <Link href="https://forms.office.com/Pages/ResponsePage.aspx?id=z6hZgX372UeNMEsbTqkLe9x_hjbou89No8FZoHcG94VUQ0laTlg1TzVaOUU2V0laOEs2U1MzMllMQiQlQCN0PWcu">
+        <Link href="/welcome">
           <Button className="py-1 mt-2 text-center">
             <div className="flex items-center justify-center">
               <div className="text-lg">Join us</div>
@@ -163,7 +163,7 @@ const HeroSection = () => {
   <div className="text-5xl text-orange-500">Automation</div>
   <div className="text-5xl font-medium">Engineering Association</div>
   <div className="mt-2 text-base">Innovation and robotics for students by students</div>
-  <Link href="https://forms.office.com/Pages/ResponsePage.aspx?id=z6hZgX372UeNMEsbTqkLe9x_hjbou89No8FZoHcG94VUQ0laTlg1TzVaOUU2V0laOEs2U1MzMllMQiQlQCN0PWcu">
+  <Link href="/welcome">
     <Button className="py-2 mt-4 text-center mx-auto">
       <div className="flex items-center justify-center">
         <div className="text-lg">Join us</div>

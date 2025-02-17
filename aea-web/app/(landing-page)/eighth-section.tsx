@@ -18,7 +18,7 @@ const GetStartedFree = () => {
      
 
         <div>
-        <Link href={"https://forms.office.com/Pages/ResponsePage.aspx?id=z6hZgX372UeNMEsbTqkLe9x_hjbou89No8FZoHcG94VUQ0laTlg1TzVaOUU2V0laOEs2U1MzMllMQiQlQCN0PWcu"}
+        <Link href={"/welcome"}
           className="flex items-center text-sky-500 hover:underline hover:cursor-pointer"
         >
           Join us
