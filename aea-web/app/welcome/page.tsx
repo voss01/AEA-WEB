@@ -3,6 +3,9 @@ import Link from "next/link";
 
 export default function Welcome() {
   return (
+    <div className="overflow-x-hidden">
+<div className="md:flex">
+  <div className="md:flex-grow md:px-12 md:mx-auto md:max-w-6xl">
     <div className="min-h-screen bg-white px-4 flex flex-col items-center justify-center">
       {/* Mobile Arlo Image (small, above the header) */}
       <div className="md:hidden flex justify-center mt-4">
@@ -98,5 +101,11 @@ export default function Welcome() {
         </div>
       </div>
     </div>
+</div>
+
+    </div>
+    </div>
   );
+
+
 }
