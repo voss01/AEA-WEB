@@ -11,7 +11,7 @@ const action = createSafeActionClient()
 
 
 export const createProduct = action.schema(ProductSchema).action(
-    async ({ parsedInput: { description, title, id } }) => {
+    async ({ parsedInput: { description, title, link, id } }) => {
 
     try {
       //EDIT MODE
@@ -22,7 +22,7 @@ export const createProduct = action.schema(ProductSchema).action(
         if (!currentProduct) return { error: "article not found" }
         const editedProduct = await db
           .update(products)
-          .set({ description, title })
+          .set({ description, title, link })
           .where(eq(products.id, id))
           .returning()
         revalidatePath("/dashboard/articles")
@@ -32,7 +32,7 @@ export const createProduct = action.schema(ProductSchema).action(
       if (!id) {
         const newProduct = await db
           .insert(products)
-          .values({ description, title })
+          .values({ description, title, link })
           .returning()
         revalidatePath("/dashboard/articles")
         revalidatePath("/")

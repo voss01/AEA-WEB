@@ -64,13 +64,13 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
           <AccordionContent defaultValue="item-1" className="space-y-2">
             <Link href={"/aziende"} className="flex" onClick={handleLinkClick}>
               <div>
-                <PiBriefcaseDuotone className="h-6 w-6 mr-4 text-orange-400" />
+                <PiBriefcaseDuotone className="h-6 w-6 mr-4 text-blue-400" />
               </div>
               <div>Aziende</div>
             </Link>
             <Link href={"/progetti"} className="flex" onClick={handleLinkClick}>
               <div>
-                <PiGearDuotone className="h-6 w-6 mr-4 text-green-400" />
+                <PiGearDuotone className="h-6 w-6 mr-4 text-rose-400" />
               </div>
 
               <div>Progetti</div>
@@ -81,14 +81,14 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}
             >
               <div>
-                <PiWineDuotone className="h-6 w-6 mr-4 text-indigo-400" />
+                <PiWineDuotone className="h-6 w-6 mr-4 text-yellow-400" />
               </div>
 
               <div>Eventi</div>
             </Link>
             <Link href={"/viaggi"} className="flex" onClick={handleLinkClick}>
               <div>
-                <PiAirplaneTakeoffDuotone className="h-6 w-6 mr-4 text-blue-400" />
+                <PiAirplaneTakeoffDuotone className="h-6 w-6 mr-4 text-violet-400" />
               </div>
 
               <div>Viaggi</div>
@@ -99,7 +99,7 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}
             >
               <div>
-                <UserPlus className="h-6 w-6 mr-4 text-rose-400" />
+                <UserPlus className="h-6 w-6 mr-4 text-green-400" />
               </div>
 
               <div>Ultimi recruitment</div>

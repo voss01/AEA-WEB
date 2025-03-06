@@ -5,6 +5,7 @@ export const ProductSchema = z.object({
   title: z.string().min(5, {
     message: "Title must be at least 5 characters long",
   }),
+  link: z.string().optional(),
   description: z.string().min(40, {
     message: "Description must be at least 40 characters long",
   }),

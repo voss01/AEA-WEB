@@ -77,7 +77,7 @@ export function Menu() {
             <div className="flex">
               <ul className="grid  p-2 md:w-[400px]  lg:w-[250px] hover:cursor-pointer border-r">
                 <div className="flex items-center gap-1 p-1 rounded-sm hover:bg-gray-400/10">
-                  <PiBriefcaseDuotone className="mr-2 text-2xl text-red-600" />
+                  <PiBriefcaseDuotone className="mr-2 text-2xl text-blue-600" />
                   <div className="">
                     <Link href={"/aziende"}>
                       <a>Aziende</a>
@@ -89,7 +89,7 @@ export function Menu() {
                 </div>
 
                 <div className="flex items-center gap-1 p-1 rounded-sm hover:bg-gray-400/10">
-                  <PiGearDuotone className="mr-2 text-2xl text-blue-600" />
+                  <PiGearDuotone className="mr-2 text-2xl text-red-600" />
                   <div className="">
                     <a>Progetti</a>
                     <p className="text-sm font-light text-gray-400">
