@@ -36,6 +36,7 @@ export default function ArticleForm() {
     resolver: zodResolver(ProductSchema),
     defaultValues: {
       title: "",
+      link:"",
       description: "",
     },
     mode: "onChange",
@@ -56,6 +57,7 @@ export default function ArticleForm() {
       if (data.success) {
         const id = parseInt(editMode);
         form.setValue("title", data.success.title);
+        form.setValue("link", data.success.link ?? ""); 
         form.setValue("description", data.success.description);
         form.setValue("id", id);
       }
@@ -114,6 +116,19 @@ export default function ArticleForm() {
                   <FormLabel>Article Title</FormLabel>
                   <FormControl>
                     <Input placeholder="Article title" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+             <FormField
+              control={form.control}
+              name="link"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Article link</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Article link" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

@@ -107,7 +107,9 @@ export const products = pgTable("products", {
   id: serial("id").primaryKey(),
   description: text("description").notNull(),
   title: text("title").notNull(),
+  link: text("link"),
   created: timestamp("created").defaultNow(),
+
 
 })
 
