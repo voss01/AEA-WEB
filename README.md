@@ -3,7 +3,7 @@
 
 put in aea-web folder the .env.local file
 
-First, run the development server:
+then, run the development server:
 
 ```bash
 
