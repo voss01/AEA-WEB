@@ -106,7 +106,7 @@ export default function Welcome() {
         <div className="flex items-center justify-center gap-2">
           {copiedItem === "iban" ? <Check size={18} /> : <Copy size={18} />}
           <span className="text-lg">
-            {copiedItem === "iban" ? "Copiato!" : "Clicca per copiare l'IBAN"}
+            {copiedItem === "iban" ? "Copiato!" : "Copia l'IBAN"}
           </span>
         </div>
       </Button>
