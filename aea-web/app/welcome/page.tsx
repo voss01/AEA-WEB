@@ -4,19 +4,23 @@ import Link from "next/link";
 import { useState } from "react";
 import { Check, Copy } from "lucide-react";
 export default function Welcome() {
+  
 
   const iban = "IT51K0569601620000010602X50";
-  const [copied, setCopied] = useState(false);
+  const beneficiary = "Nome Beneficiario";
 
-  const handleCopy = async () => {
+  const [copiedItem, setCopiedItem] = useState<string | null>(null);
+
+  const handleCopy = async (text: string, item: string) => {
     try {
-      await navigator.clipboard.writeText(iban);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
+      await navigator.clipboard.writeText(text);
+      setCopiedItem(item);
+      setTimeout(() => setCopiedItem(null), 2000); // Reset after 2 seconds
     } catch (err) {
       console.error("Failed to copy: ", err);
     }
   };
+
 
   
 
@@ -92,15 +96,21 @@ export default function Welcome() {
               </div>
               <h3 className="text-lg font-semibold">Paga la quota di 10€</h3>
               <p className="text-gray-500 text-sm">
-                Sul seguente iban IT51K0569601620000010602X50, la causale deve essere “quota associativa [NOME COGNOME]”
+                Sul seguente iban IT51K0569601620000010602X50, la causale deve essere “quota associativa [NOME COGNOME], Beneficiario: Automation Engineering Association
               </p>
              
-            <Button onClick={handleCopy} className="py-1 mt-2 text-center bg-orange-500">
-                  <div className="flex items-center justify-center gap-2">
-                    {copied ? <Check size={18} /> : <Copy size={18} />}
-                    <span className="text-lg">{copied ? "Copiato!" : "Clicca per copiare l'IBAN"}</span>
-                  </div>
-                </Button>
+              <Button
+        onClick={() => handleCopy(iban, "iban")}
+        className="py-1 mt-2 text-center bg-orange-500"
+      >
+        <div className="flex items-center justify-center gap-2">
+          {copiedItem === "iban" ? <Check size={18} /> : <Copy size={18} />}
+          <span className="text-lg">
+            {copiedItem === "iban" ? "Copiato!" : "Clicca per copiare l'IBAN"}
+          </span>
+        </div>
+      </Button>
+    
 
              
             </div>
