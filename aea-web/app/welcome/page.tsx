@@ -1,7 +1,26 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
+import { useState } from "react";
+import { Check, Copy } from "lucide-react";
 export default function Welcome() {
+
+  const iban = "IT51K0569601620000010602X50";
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(iban);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+    }
+  };
+
+  
+
+
   return (
     <div className="overflow-x-hidden">
 <div className="md:flex">
@@ -71,21 +90,18 @@ export default function Welcome() {
               <div className="absolute left-[-4.25rem] top-0 flex items-center justify-center bg-white border border-black w-10 h-10">
                 2
               </div>
-              <h3 className="text-lg font-semibold">Paga la tassa di 10€</h3>
+              <h3 className="text-lg font-semibold">Paga la quota di 10€</h3>
               <p className="text-gray-500 text-sm">
-                Con Paypal, per familiari e amici.
+                Sul seguente iban IT51K0569601620000010602X50, la causale deve essere “quota associativa [NOME COGNOME]”
               </p>
-              <Link
-  href="https://paypal.me/giomiccio?country.x=IT&locale.x=it_IT"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Button className="py-1 mt-2 text-center bg-orange-500">
-    <div className="flex items-center justify-center">
-      <div className="text-lg">Paga</div>
-    </div>
-  </Button>
-</Link>
+             
+            <Button onClick={handleCopy} className="py-1 mt-2 text-center bg-orange-500">
+                  <div className="flex items-center justify-center gap-2">
+                    {copied ? <Check size={18} /> : <Copy size={18} />}
+                    <span className="text-lg">{copied ? "Copiato!" : "Clicca per copiare l'IBAN"}</span>
+                  </div>
+                </Button>
+
              
             </div>
 
