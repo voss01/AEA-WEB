@@ -33,9 +33,9 @@ export default async function LandingPage() {
 
       <NewsSection />
       
-
+      {/*
       <SecondSection />
-   
+        */}
 
 
       

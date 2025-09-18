@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
+
 import { HeroParallax } from "@/components/ui/hero-parallax";
 
 export function HeroParallaxDemo() {
-  return (  
+  return (
     <div className="relative z-10 w-full overflow-x-clip">
     <HeroParallax products={products} />
   </div>
