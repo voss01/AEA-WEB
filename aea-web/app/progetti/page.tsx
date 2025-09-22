@@ -1,6 +1,6 @@
 import {
-PiDrone,
-PiHandPalm,
+  PiDrone,
+  PiHandPalm,
   PiArrowRight,
   PiEye,
   PiDogLight,
@@ -71,8 +71,6 @@ const items = [
       </div>
     ),
   },
-
-  
 ];
 
 const Progetti = () => {
@@ -80,7 +78,7 @@ const Progetti = () => {
     <>
       <div className="flex flex-col pt-32 items-center justify-center">
         <div className="text-3xl xl:text-5xl font-medium justify-center items-center flex">
-         ./Progetti
+          ./Progetti
         </div>
         <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
           Controlla recruitments <PiArrowRight className="ml-3 text-sm " />
