@@ -14,61 +14,74 @@ import {
   PiWatchFill,
 } from "react-icons/pi";
 import Image from "next/image";
+import Link from "next/link";
 
 const items = [
   {
     icon: <PiHouseFill className="text-2xl text-red-500" />,
     name: "Il team progetti",
     button: (
-      <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
-        Scopri <PiArrowRight className="ml-3 text-sm " />
-      </div>
+      <Link href="/blog">
+        <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
+          Scopri <PiArrowRight className="ml-3 text-sm " />
+        </div>
+      </Link>
     ),
-    image: "/images/company-wiki-template.webp",
+    image: "/public/assets/falco/1.jpg",
   },
   {
     icon: <PiDrone className="text-2xl text-sky-600" />,
     name: "FALCO",
     button: (
-      <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
-        Scopri <PiArrowRight className="ml-3 text-sm " />
-      </div>
+      <Link href="/progetti/drone">
+        <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
+          Scopri <PiArrowRight className="ml-3 text-sm " />
+        </div>
+      </Link>
     ),
   },
   {
     icon: <PiHandPalm className="text-2xl text-orange-500" />,
     name: "PROTESI",
     button: (
-      <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
-        Scopri <PiArrowRight className="ml-3 text-sm " />
-      </div>
+      <Link href="/progetti/sapiens">
+        <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
+          Scopri <PiArrowRight className="ml-3 text-sm " />
+        </div>
+      </Link>
     ),
   },
   {
     icon: <PiEye className="text-2xl text-green-500" />,
-    name: "COMPUTER VISION",
+    name: "AI ARMS",
     button: (
-      <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
-        Scopri <PiArrowRight className="ml-3 text-sm " />
-      </div>
+      <Link href="/progetti/armsAI">
+        <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
+          Scopri <PiArrowRight className="ml-3 text-sm " />
+        </div>
+      </Link>
     ),
   },
   {
     icon: <PiDogLight className="text-2xl text-red-500" />,
     name: "ROBOT DOG",
     button: (
-      <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
-        Scopri <PiArrowRight className="ml-3 text-sm " />
-      </div>
+      <Link href="/progetti/spot">
+        <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
+          Scopri <PiArrowRight className="ml-3 text-sm " />
+        </div>
+      </Link>
     ),
   },
   {
     icon: <PiCarProfileBold className="text-2xl text-emerald-500" />,
-    name: "DUCKIETOWN",
+    name: "DRIFT",
     button: (
-      <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
-        Scopri <PiArrowRight className="ml-3 text-sm " />
-      </div>
+      <Link href="/progetti/drift">
+        <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
+          Scopri <PiArrowRight className="ml-3 text-sm " />
+        </div>
+      </Link>
     ),
   },
 ];
