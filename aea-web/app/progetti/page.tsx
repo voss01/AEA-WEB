@@ -27,7 +27,7 @@ const items = [
         </div>
       </Link>
     ),
-    image: "/public/assets/falco/1.jpg",
+    image: "/public/assets/progetti.jpg",
   },
   {
     icon: <PiDrone className="text-2xl text-sky-600" />,
