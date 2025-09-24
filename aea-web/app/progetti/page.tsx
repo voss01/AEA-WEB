@@ -20,13 +20,7 @@ const items = [
   {
     icon: <PiHouseFill className="text-2xl text-red-500" />,
     name: "Il team progetti",
-    button: (
-      <Link href="/blog">
-        <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
-          Scopri <PiArrowRight className="ml-3 text-sm " />
-        </div>
-      </Link>
-    ),
+    button: <></>,
     image: "/assets/progetti.jpg",
   },
   {
@@ -93,9 +87,11 @@ const Progetti = () => {
         <div className="text-3xl xl:text-5xl font-medium justify-center items-center flex">
           ./Progetti
         </div>
-        <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
-          Controlla recruitments <PiArrowRight className="ml-3 text-sm " />
-        </div>
+        <Link href="https://forms.office.com/e/sYcMGaF0S1" target="_blank">
+          <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer pt-6">
+            Controlla recruitments <PiArrowRight className="ml-3 text-sm " />
+          </div>
+        </Link>
       </div>
       <div className="grid xl:grid-cols-4  md:grid-cols-2 md:row-span-1  gap-4  xl:gap-6 mt-8 px-8 md:px-16 xl:px-0 xl:w-3/4  2xl:w-[55%] mx-auto md:w-full">
         {items.map((item, index) => (
