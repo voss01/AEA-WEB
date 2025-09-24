@@ -1,4 +1,3 @@
-
 import HeroSection from "./hero-section";
 import SecondSection from "./second-section";
 import ThirdSection from "./third-section";
@@ -9,9 +8,6 @@ import SixthSection from "./sixth-section";
 import GetStartedFree from "./eighth-section";
 import Footer from "@/components/footer";
 
-
-
-
 import ProductTags from "@/components/articles/product-tags";
 import Products from "@/components/articles/products";
 import { db } from "@/server";
@@ -21,29 +17,18 @@ import ResultsSection from "./results-section";
 
 export const revalidate = 60 * 60;
 
-
-
-
 export default async function LandingPage() {
- 
-
   return (
     <div className="overflow-x-hidden">
       <HeroSection />
 
       <NewsSection />
-      
-      {/*
+
       <SecondSection />
-        */}
 
-
-      
       <SixthSection />
 
       <GetStartedFree />
-
     </div>
   );
 }
- 

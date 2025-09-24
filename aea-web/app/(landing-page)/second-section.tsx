@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import { PiArrowRight } from 'react-icons/pi';
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { PiArrowRight } from "react-icons/pi";
 
 const logos = [
   { image: "/logos/Fanuc_logo 1.svg" },
@@ -9,7 +9,7 @@ const logos = [
   { image: "/logos/Arduino_Logo 1.svg" },
   { image: "/logos/Amazon.svg" },
   { image: "/logos/ST_logo_2020_blue_V 1.svg" },
-  { image: "/logos/fae.jpeg" },
+
   { image: "/logos/makerFaire.jpeg" },
   { image: "/logos/bendingS.png" },
 ];
@@ -18,11 +18,10 @@ const SecondSection = () => {
   return (
     <div className="flex flex-col items-center justify-center pt-16">
       <div className="w-3/4 text-4xl font-medium text-center xl:text-5xl">
-        Collaborazioni con
+        Visite in azienda con
       </div>
       <div className="px-8 py-4 text-center xl:w-1/4">
-        Siamo in stretto contatto con svariate aziende sia per visite che per
-        know how da applicare nei progetti
+        Disclaimer: non riceviamo fondi da queste aziende
       </div>
       <div>
         <Link
@@ -49,6 +48,6 @@ const SecondSection = () => {
       </div>
     </div>
   );
-}
+};
 
 export default SecondSection;
