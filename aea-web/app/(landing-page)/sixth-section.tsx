@@ -93,7 +93,7 @@ const peopleBoard = [
     description: "",
     listItems: [
       {
-        url: "https://it.linkedin.com/in/costanza-marafante?trk=people-guest_people_search-card",
+        url: "#",
         icon: "/icons/linkedin.webp",
       },
     ],
@@ -111,7 +111,7 @@ const peopleDirettivo = [
     description: "",
     listItems: [
       {
-        url: "https://www.linkedin.com/in/gabriel-voss-256501181",
+        url: "#",
         icon: "/icons/linkedin.webp",
       },
     ],
