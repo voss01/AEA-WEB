@@ -1,12 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { useRef, useState } from "react";
-import { cn } from "@/lib/utils";
 
-import { TbSwitch3 } from "react-icons/tb";
-import { PiEyeLight, PiPaletteLight, PiArrowRight } from "react-icons/pi";
 import { Lora } from "next/font/google";
+import { PiArrowRight } from "react-icons/pi";
 
 import {
   Accordion,
@@ -77,7 +74,7 @@ const peopleBoard = [
     description: "",
     listItems: [
       {
-        url: "https://it.linkedin.com/in/costanza-marafante?trk=people-guest_people_search-card",
+        url: "https://it.linkedin.com/in/costanza-marafante",
         icon: "/icons/linkedin.webp",
       },
     ],
@@ -111,7 +108,7 @@ const peopleDirettivo = [
     description: "",
     listItems: [
       {
-        url: "#",
+        url: "https://www.linkedin.com/in/caterinaviola/",
         icon: "/icons/linkedin.webp",
       },
     ],
@@ -126,7 +123,7 @@ const peopleDirettivo = [
     description: "",
     listItems: [
       {
-        url: "#",
+        url: "https://www.linkedin.com/in/oscar-lovato-a20392201/",
         icon: "/icons/linkedin.webp",
       },
     ],
@@ -282,18 +279,23 @@ const SixthSection = () => {
                               </p>
                               <ul className="flex space-x-4 sm:mt-0">
                                 {people.listItems.map((item, index) => (
-                                  <li key={index}>
-                                    <a
-                                      href={item.url}
-                                      className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-                                    >
-                                      <img
-                                        src={item.icon}
-                                        alt={`Icon ${index + 1}`}
-                                        className="w-5 h-5"
-                                      />
-                                    </a>
-                                  </li>
+                                  <>
+                                    {item.url != "#" && (
+                                      <li key={index}>
+                                        <a
+                                          href={item.url}
+                                          target="_blank"
+                                          className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                                        >
+                                          <img
+                                            src={item.icon}
+                                            alt={`Icon ${index + 1}`}
+                                            className="w-5 h-5"
+                                          />
+                                        </a>
+                                      </li>
+                                    )}
+                                  </>
                                 ))}
                               </ul>
                             </div>
@@ -339,18 +341,23 @@ const SixthSection = () => {
                               </p>
                               <ul className="flex space-x-4 sm:mt-0">
                                 {people.listItems.map((item, index) => (
-                                  <li key={index}>
-                                    <a
-                                      href={item.url}
-                                      className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-                                    >
-                                      <img
-                                        src={item.icon}
-                                        alt={`Icon ${index + 1}`}
-                                        className="w-5 h-5"
-                                      />
-                                    </a>
-                                  </li>
+                                  <>
+                                    {item.url != "#" && (
+                                      <li key={index}>
+                                        <a
+                                          href={item.url}
+                                          target="_blank"
+                                          className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                                        >
+                                          <img
+                                            src={item.icon}
+                                            alt={`Icon ${index + 1}`}
+                                            className="w-5 h-5"
+                                          />
+                                        </a>
+                                      </li>
+                                    )}
+                                  </>
                                 ))}
                               </ul>
                             </div>
