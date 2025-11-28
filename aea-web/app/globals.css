@@ -98,7 +98,27 @@
   * {
     @apply border-border;
   }
+
+  :root {
+    --font-main: "JetBrains Mono", monospace;
+    --font-secondary: "Mulish", sans-serif;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-main);
+  }
+
+
+  p,
+  small,
+  input,
+  textarea,
+  label {
+    font-family: var(--font-secondary);
+  }
+
+  .font-secondary {
+    font-family: var(--font-secondary);
   }
 }

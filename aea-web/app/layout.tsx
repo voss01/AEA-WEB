@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Roboto } from "next/font/google";
+import { JetBrains_Mono, Mulish} from "next/font/google";
 import "./globals.css";
-import { Outfit } from "next/font/google";
 
 import Nav from "@/components/navigation/nav";
 import { cn } from "@/lib/utils";
@@ -11,10 +10,19 @@ import type { Viewport } from "next";
 import Footer from "@/components/footer";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-const font = JetBrains_Mono({
+
+//fonts
+const font_main = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400"],
+  variable: "--font-main",
 });
+const font_secondary = Mulish({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-secondary",
+});
+
 
 export const metadata: Metadata = {
   title: "Aea polimi",
@@ -61,7 +69,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className} `}>
+      <body className={`${font_main.variable} ${font_secondary.variable}`}>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <Nav />
         <Toaster />
