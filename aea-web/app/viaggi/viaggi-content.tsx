@@ -2,7 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
-
+import { Button } from "@/components/ui/button";
+import TravelCard from "@/components/travelcard.jsx";
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
   ssr: false,
 });
@@ -21,7 +22,7 @@ export function GlobeDemo() {
     ambientLight: "#38bdf8",
     directionalLeftLight: "#ffffff",
     directionalTopLight: "#ffffff",
-    pointLight: "#ffffff",
+    pointLight: "#fa1313ff",
     arcTime: 1000,
     arcLength: 0.9,
     rings: 1,
@@ -393,7 +394,6 @@ export function GlobeDemo() {
       color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
   ];
-
   return (
     <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-black bg-white relative w-full">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
@@ -411,17 +411,33 @@ export function GlobeDemo() {
           }}
           className="div"
         >
-          <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
+          <h1 className="text-center text-5xl md:text-7xl font-extrabold text-black dark:text-white">
             Viaggi
-          </h2>
+          </h1>
+          <p className="text-center text-lg md:text-2xl font-normal text-neutral-700 dark:text-neutral-300 mt-2">
+            Rimani aggiornato
+          </p>
           <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
-            Ogni anno cerchiamo le fiere e gli eventi migliori di robotica da visitare
+            Organizziamo anche dei viaggi: unisciti a noi se vuoi farne parte!
           </p>
         </motion.div>
-        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
-        <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
-          <World data={sampleArcs} globeConfig={globeConfig} />;
-        </div>
+    <div className="flex justify-center mt-4">
+        <a
+          href="https://www.instagram.com/aeapolimi?igsh=bzQ4NTlsZXVhajll"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 flex items-center justify-center gap-2">
+            <span className="text-lg">Seguici su</span>
+            <img src="/placeholder_small.svg" alt="Instagram" className="w-6 h-6"/>
+          </Button>
+        </a>
+    </div>
+      <div className="flex justify-center items-start gap-6 mt-10 px-4 flex-wrap">
+        <TravelCard title="Bora Bora" image="/placeholder_small.svg" date="13/07/2025 - 14/08/2025" info="Robots, beaches and luxury hotel"/>
+        <TravelCard title="Palo Alto" image="/placeholder_small.svg"/>
+        <TravelCard title="Maldive" image="/placeholder_small.svg"/>
+      </div>
       </div>
     </div>
   );
