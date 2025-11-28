@@ -95,7 +95,7 @@ export const LoginForm = () =>{
                       control={form.control}
                       name="email"
                       render={({ field }) => (
-                        <FormItem>
+                        <FormItem className="mb-4">
                           <FormLabel>Email</FormLabel>
                           <FormControl>
                             <Input
@@ -114,7 +114,7 @@ export const LoginForm = () =>{
                       control={form.control}
                       name="password"
                       render={({ field }) => (
-                        <FormItem>
+                        <FormItem >
                           <FormLabel>Password</FormLabel>
                           <FormControl>
                             <Input
@@ -138,15 +138,17 @@ export const LoginForm = () =>{
                   <Link href="/auth/reset">Forgot your password</Link>
                 </Button>
               </div>
+              <div className="mt-10">
               <Button
                 type="submit"
                 className={cn(
-                  "w-full my-2",
+                  "w-full my-[-10px] bg-orange-500",
                   status === "executing" ? "animate-pulse" : ""
                 )}
               >
                 {showTwoFactor ? "Verify" : "Sign In"}
               </Button>
+              </div>
             </form>
           </Form>
         </div>

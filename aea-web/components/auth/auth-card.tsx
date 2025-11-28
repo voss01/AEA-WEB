@@ -23,7 +23,7 @@ export const AuthCard = ( {
     <Card>
         <CardHeader>
 
-            <CardTitle>
+            <CardTitle className="my-6 text-6xl">
                 {cardTitle}
             </CardTitle>
             <CardContent>
