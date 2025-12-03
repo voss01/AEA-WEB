@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
@@ -395,8 +396,8 @@ export function GlobeDemo() {
     },
   ];
   return (
-    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-black bg-white relative w-full">
-      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
+    <div className="flex flex-row items-center justify-center py-20 h-full md:h-auto dark:bg-black bg-white relative w-full">
+      <div className="max-w-7xl mx-auto w-full relative h-full md:h-[40rem] px-4">
         <motion.div
           initial={{
             opacity: 0,
@@ -411,13 +412,13 @@ export function GlobeDemo() {
           }}
           className="div"
         >
-          <h1 className="text-center text-5xl md:text-7xl font-extrabold text-black dark:text-white">
+          <h1 className="text-center text-5xl md:text-7xl font-extrabold text-black dark:text-white mb-6">
             Viaggi
           </h1>
-          <p className="text-center text-lg md:text-2xl font-normal text-neutral-700 dark:text-neutral-300 mt-2">
+          <p className="text-center text-lg md:text-2xl font-normal text-neutral-700 dark:text-neutral-300 mt-2 mb-4">
             Rimani aggiornato
           </p>
-          <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
+          <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto mb-4">
             Organizziamo anche dei viaggi: unisciti a noi se vuoi farne parte!
           </p>
         </motion.div>
@@ -427,18 +428,30 @@ export function GlobeDemo() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 flex items-center justify-center gap-2">
-            <span className="text-lg">Seguici su</span>
-            <img src="/placeholder_small.svg" alt="Instagram" className="w-6 h-6"/>
-          </Button>
+    <Button className="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 flex items-center justify-center gap-2">
+        <span className="text-lg">Seguici su</span>
+          <FaInstagram className="h-[24px] w-[24px]"/>
+    </Button>
         </a>
     </div>
-      <div className="flex justify-center items-start gap-6 mt-10 px-4 flex-wrap">
-        <TravelCard title="Bora Bora" image="/placeholder_small.svg" date="13/07/2025 - 14/08/2025" info="Robots, beaches and luxury hotel"/>
-        <TravelCard title="Palo Alto" image="/placeholder_small.svg"/>
-        <TravelCard title="Maldive" image="/placeholder_small.svg"/>
+      <div className="flex justify-center items-stretch gap-6 mt-10 px-4 flex-wrap">
+        <TravelCard 
+              title="Mecspe Bologna" 
+              image="/placeholder_small.svg"
+              date="Marzo 2026"
+              info="Fiera di Automazione"/>
+        <TravelCard 
+              title="dnf" 
+              image="/placeholder_small.svg"
+              date="Marzo 2026"
+              info="dnf"/>
+        <TravelCard 
+              title="E-Tech Bologna" 
+              image="/placeholder_small.svg"
+              date="Ottobre 2026"
+              info="Conference su Tecnologia"/>
       </div>
-      </div>
+    </div>
     </div>
   );
 }
