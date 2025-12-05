@@ -1,22 +1,46 @@
 "use client"; // Ensure this component is treated as a client component
 
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
 import { VariantsWithProduct } from "@/lib/infer-type";
-import Link from "next/link";
 import Image from "next/image";
-import { Card, CardContent } from "@/components/ui/card";
-import { useEffect, useMemo } from "react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useRouter } from "next/router";
+import { useMemo } from "react";
 
 type ProductTypes = {
   variants: VariantsWithProduct[];
   tag?: string; // Optional tag prop
 };
+
+var months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+function FormatDate(date: Date) {
+  return (
+    date.getDay().toString().padStart(2, "0") +
+    " " +
+    months[date.getMonth()] +
+    " " +
+    date.getFullYear().toString()
+  );
+}
 
 export default function ProductsCarousel({ variants, tag }: ProductTypes) {
   const params = useSearchParams();
@@ -41,7 +65,8 @@ export default function ProductsCarousel({ variants, tag }: ProductTypes) {
         opts={{
           align: "start",
         }}
-        className="w-full max-w-7xl mx-auto mb-2" // Increased max width
+        displaySlider={true}
+        className="w-full max-w-7xl  mb-2" // Increased max width
       >
         <CarouselContent>
           {filtered.map((variant) => (
@@ -54,10 +79,13 @@ export default function ProductsCarousel({ variants, tag }: ProductTypes) {
               >
                 <div className="p-1">
                   <Card>
-                    <CardContent className="flex flex-col h-full p-0">
+                    <CardContent className="flex flex-col h-full pl-6">
                       {/* Image at the top */}
+                      <div className="hidden xl:block text-sm text-muted-foreground">
+                        /{variant.updated ? FormatDate(variant.updated) : ""}
+                      </div>
                       <Image
-                        className="rounded-t-md w-full h-48 object-cover pt-4 pl-6 pb-4 pr-0" // Make image fill the width and maintain aspect ratio
+                        className="rounded-t-md w-full h-48 object-cover py-4 pr-0" // Make image fill the width and maintain aspect ratio
                         src={variant.variantImages[0].url}
                         width={720}
                         height={480}
@@ -65,11 +93,11 @@ export default function ProductsCarousel({ variants, tag }: ProductTypes) {
                         loading="lazy"
                       />
                       {/* Title and description underneath */}
-                      <div className="flex flex-col justify-between p-4">
+                      <div className="flex flex-col justify-between ">
                         <div className="font-medium">
                           <h2 className="text-lg">{variant.product.title}</h2>
                           <p className="text-sm text-muted-foreground">
-                            {variant.productType}
+                            /{variant.productType}
                           </p>
                         </div>
                       </div>
