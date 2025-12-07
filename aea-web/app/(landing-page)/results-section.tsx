@@ -1,46 +1,120 @@
-import ProductTags from '@/components/articles/product-tags';
-import ProductsCarousel from '@/components/articles/products-carousel';
-import Image from 'next/image';
-import React from 'react';
-import { db } from "@/server";
-import { Button } from '@/components/ui/button';
-import { PiArrowRight } from 'react-icons/pi';
+"use client";
 
-export default async function ResultsSection() {
+import { Button } from "@/components/ui/button";
+import { Lora } from "next/font/google";
+import { PiArrowRight } from "react-icons/pi";
 
+const font = Lora({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const tabs = [
+  {
+    text: "400+",
+    subtext: "associati",
+  },
+  {
+    text: "4",
+    subtext: "progetti in corso",
+  },
+  {
+    text: "10+",
+    subtext: "aziende visitate",
+  },
+];
+const colors = ["#0384C7", "#E45454", "#A14EED"];
+
+type FolderBoxProps = {
+  text: string;
+  subtext: string;
+  color: string;
+};
+
+const FolderBox = (tab: FolderBoxProps) => {
   return (
-    <>
-      
-    <div className="flex flex-col  justify-center pt-16">
-   
-      {/* Outer Section Divided into 3 Equal Parts */}
-      <div className="flex w-full max-w-7xl mb-8">
-        {/* Left Cell - Empty space (1/3) */}
-
-        <div className="flex-1 text-5xl font-bold xl:text-6xl flex justify-center items-center">
-          ./Risultati Ottenuti
-        </div>
-       
-
-        {/* Middle Cell - Image (1/3) */}
-        <div className="flex-1 flex justify-center">
-          
-        </div>
-       
-
-        {/* Right Cell - ./News Text (1/3) */}
-        <div className="flex-1"></div>
-       <Button className="py-1 mt-2 text-center">
-                       <div className="flex items-center justify-center">
-                         <div className="text-lg">Scopri</div>
-                         <div><PiArrowRight className="ml-2" /></div>
-                       </div>
-                     </Button>
-        
+    <div
+      key={tab.text}
+      className={`
+               xl:flex
+               space-x-4
+               xl:pt-4
+               sm:my-10
+               xl:my-0
+               w-72
+               h-48
+               relative
+             `}
+    >
+      {/* SVG background for the border */}
+      <div className="absolute inset-0">
+        <svg
+          width="236"
+          height="163"
+          viewBox="0 0 236 163"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-full absolute top-0 left-0"
+        >
+          <path
+            d="M0.5 162.5V0.5H42C50.4 0.5 69 0.5 69 7.5H235V162.5H0.5Z"
+            stroke="#1F1F1F"
+          />
+        </svg>
       </div>
 
-      {/* Additional Content (Product Tags and Carousel) */}
-   
-        </div></>
+      <div className="flex flex-col w-full justify-center px-4 relative z-10">
+        {/* Increased margin-top here */}
+        <div
+          className="w-2/3 mb-4 text-7xl font-medium"
+          style={{ color: tab.color }}
+        >
+          {tab.text}
+        </div>
+        <div className="w-full text-sm">{tab.subtext}</div>
+      </div>
+    </div>
   );
-}
+};
+
+const ResultsSection = () => {
+  return (
+    <>
+      <div className="section">
+        <div className="flex justify-between flex-row">
+          <div className="w-1/2" aria-roledescription="section title">
+            <h2>./Risultati ottenuti</h2>
+            {/*<div className="px-10 py-4 text-center xl:w-1/2 2xl:w-1/3 md:w-2/3">*/}
+            <div className="subtitle">
+              Cerchiamo di innovare e creare nuove opportunità ogni giorno.
+            </div>
+          </div>
+
+          <Button className="py-1 mt-2 text-center">
+            <div className="flex items-center justify-center">
+              <div className="text-lg">Scopri</div>
+              <div>
+                <PiArrowRight className="ml-2" />
+              </div>
+            </div>
+          </Button>
+        </div>
+        <div className="flex flex-col items-center justify-center pt-20 xl:pt-24 ">
+          <div className="flex-1"></div>
+          <div className="flex flex-wrap justify-center gap-4 mt-8 px-8 xl:px-0 xl:w-3/4 2xl:w-[55%] mx-auto md:w-full">
+            {tabs.map((tab, index) => (
+              <FolderBox
+                key={tab.text}
+                text={tab.text}
+                subtext={tab.subtext}
+                color={colors[index]}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default ResultsSection;

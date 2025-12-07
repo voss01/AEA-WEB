@@ -3,7 +3,6 @@
 import { useRef, useState } from "react";
 
 import { Lora } from "next/font/google";
-import { PiArrowRight } from "react-icons/pi";
 
 import {
   Accordion,
@@ -176,7 +175,7 @@ const peopleDirettivo = [
   },
 ];
 
-const tabs = [
+export const tabs = [
   {
     text: "400+",
     subtext: "associati",
@@ -202,41 +201,12 @@ const SixthSection = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center pt-20 xl:pt-24 ">
-        <div className="w-3/4 text-3xl font-medium text-center xl:text-5xl xl:w-1/2">
+      {/*<div className="w-3/4 text-3xl font-medium text-center xl:text-5xl xl:w-1/2">
           Risultati ottenuti
-        </div>
-        <div className="px-10 py-4 text-center xl:w-1/2 2xl:w-1/3 md:w-2/3">
-          Cerchiamo di innovare e creare nuove opportunità ogni giorno.
-        </div>
-        <div className="flex items-center text-sky-500 hover:underline hover:cursor-pointer">
-          Scopri <PiArrowRight className="ml-3 text-sm " />
-        </div>
-        <div className="grid grid-cols-12 md:row-span-2 gap-4 xl:gap-6 mt-8 px-8 xl:px-0 xl:w-3/4 2xl:w-[55%] mx-auto md:w-full">
-          {tabs.map((tab, index) => (
-            <div
-              key={index}
-              className={`
-              col-span-12
-              ${
-                index <= 2
-                  ? "lg:col-span-4 bg-[#f6f5f4] p-6 rounded-xl flex"
-                  : null
-              }
-            `}
-            >
-              {index <= 2 ? (
-                <div className="flex flex-col">
-                  <div className="text-5xl font-medium text-sky-600">
-                    {tab.text}
-                  </div>
-                  <div className="text-sm">{tab.subtext}</div>
-                </div>
-              ) : null}
-            </div>
-          ))}
-        </div>
+        </div>*/}
 
+      <div className="section">
+        {/* Board Section */}
         <section className="bg-white dark:bg-gray-900">
           <div className="max-w-screen-xl px-4 py-8 mx-auto lg:py-10 lg:px-6 ">
             <Accordion
@@ -246,9 +216,7 @@ const SixthSection = () => {
             >
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-3xl font-medium text-center xl:text-5xl xl:w-1/2">
-                  <div className="max-w-screen-sm mx-auto text-3xl text-center ">
-                    Board
-                  </div>
+                  <h3>// Board</h3>
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="grid grid-cols-2 gap-8 mb-6 lg:mb-16 lg:mt-16">
@@ -308,9 +276,7 @@ const SixthSection = () => {
               </AccordionItem>
               <AccordionItem value="item-2">
                 <AccordionTrigger className="text-3xl font-medium text-center xl:text-5xl xl:w-1/2">
-                  <div className="max-w-screen-sm mx-auto text-3xl text-center ">
-                    Direttivo
-                  </div>
+                  <h3>// Direttivo</h3>
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="grid grid-cols-2 gap-8 mb-6 lg:mb-16 lg:mt-16">

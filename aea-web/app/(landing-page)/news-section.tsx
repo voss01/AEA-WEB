@@ -15,18 +15,18 @@ export default async function NewsSection() {
 
   return (
     <>
-      <div className="flex flex-col  justify-center pt-16">
+      <div className="section flex flex-col  justify-center pt-16">
         {/* Middle Cell - Image (1/3) */}
         <div className="flex flex-1 items-center justify-between">
-          <h1 className="inline-flex w-1/4">./News</h1>
+          <h1 className="inline-flex w-full xl:w-1/3">./News</h1>
           <Image
             src="/arlo/arloNews.png" // Replace with your image path
             alt="News Image"
             width={150} // Adjust as needed
             height={100} // Adjust as needed
-            className="object-cover rounded-lg w-1/6"
+            className="hidden xl:block object-cover rounded-lg w-1/6"
           />
-          <div className="w-1/4" />
+          <div className="w-1/3" />
         </div>
 
         {/* Right Cell - ./News Text (1/3) */}
@@ -38,8 +38,8 @@ export default async function NewsSection() {
           <ProductTags />
         </div>
         <div className="border-t border-gray-600 mb-2"></div>
-        <ProductsCarousel variants={data} />
-        <div className="border-t  border-gray-600 mb-2"></div>
+        <ProductsCarousel variants={data} withSlider={true} />
+        <div className="border-t border-gray-600 mb-2 -mt-10"></div>
       </div>
     </>
   );
