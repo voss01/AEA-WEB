@@ -98,7 +98,7 @@
     @apply bg-background text-foreground;
   }
   h1 {
-    @apply mt-6 mb-6 flex-1 text-7xl font-bold xl:text-9xl flex;
+    @apply mt-6 mb-6 text-7xl font-bold xl:text-9xl flex;
   }
   h2 {
     @apply text-2xl xl:text-3xl;
