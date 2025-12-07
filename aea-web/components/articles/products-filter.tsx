@@ -1,7 +1,8 @@
 "use client";
 import { cn } from "@/lib/utils";
 
-import ProductsCarousel from "@/components/articles/products-carousel";
+import ProductsGrid from "@/components/articles/products-grid";
+
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
@@ -81,8 +82,7 @@ export default function FilteredProductsDisplay({
         />
       </div>
 
-      <ProductsCarousel variants={variants} tag={ongoingTag} />
-      <div className="border-t border-gray-600 mb-2"></div>
+      <ProductsGrid variants={variants} tag={ongoingTag} />
     </>
   );
 }

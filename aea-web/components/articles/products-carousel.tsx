@@ -54,7 +54,6 @@ export default function ProductsCarousel({
   const paramTag = params.get("tag")?.replace(/\//g, ""); // Remove all occurrences of '/'
   const activeTag = tag || paramTag;
   console.log(paramTag); // This will log the value of "tag" without any fragment
-
   const filtered = useMemo(() => {
     if (activeTag && variants) {
       return variants.filter((variant) => variant.productType === activeTag);

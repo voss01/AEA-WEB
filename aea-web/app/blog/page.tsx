@@ -21,7 +21,7 @@ export default async function LandingPage() {
   const full_data = data.concat(data).concat(data).concat(data);
 
   return (
-    <div className="pl-14 pt-14">
+    <div className="section pt-14">
       {/* Title section */}
       <div>
         <h1>./Blog</h1>
@@ -56,7 +56,7 @@ export default async function LandingPage() {
         <h3>All Articles</h3>
       </div>
       <FilteredProductsDisplay variants={full_data} />
-
+      <div className="pt-28"></div>
       <h2>./Want more ?</h2>
 
       <DinoGame />
