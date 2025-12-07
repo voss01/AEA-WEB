@@ -145,7 +145,7 @@ const Carousel = React.forwardRef<
         <div
           ref={ref}
           onKeyDownCapture={handleKeyDown}
-          className={cn("relative", className)}
+          className={cn("relative", className, "pb-10")}
           role="region"
           aria-roledescription="carousel"
           {...props}
@@ -154,7 +154,7 @@ const Carousel = React.forwardRef<
 
           {/* Render the slider if displaySlider is true */}
           {displaySlider && (
-            <div className="absolute bottom-0 left-0 right-0 flex justify-center mt-4">
+            <div className="absolute bottom-0 left-0 right-0 flex justify-center">
               <ReactSlider
                 value={selectedIndex}
                 min={0}

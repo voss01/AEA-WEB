@@ -1,4 +1,5 @@
 "use client";
+import { cn } from "@/lib/utils";
 
 import ProductsCarousel from "@/components/articles/products-carousel";
 import { Button } from "@/components/ui/button";
@@ -6,18 +7,34 @@ import { useState } from "react";
 
 function FilterButton({
   tag,
+  currentTag,
   color,
   onFilterClick,
 }: {
   tag: string;
+  currentTag: string;
   color: string;
   onFilterClick: (tag: string) => void;
 }) {
   return (
     <Button
-      className="mr-6 px-4 rounded-tl-xl text-white"
+      className={cn(
+        "cursor-pointer mr-6 px-4 rounded-tl-xl text-white hover:opacity-100",
+        currentTag === tag || (!currentTag && tag == "all")
+          ? "opacity-100"
+          : "opacity-50"
+      )}
       style={{ backgroundColor: color }}
-      onClick={() => onFilterClick(tag == "all" ? "" : tag)}
+      onClick={() => {
+        onFilterClick(tag == "all" ? "" : tag);
+        console.log(
+          "currentTag : [" +
+            currentTag.length +
+            "], tag : .[" +
+            tag.length +
+            "]"
+        );
+      }}
     >
       {tag.charAt(0).toUpperCase() + tag.slice(1)}
     </Button>
@@ -38,15 +55,27 @@ export default function FilteredProductsDisplay({
   return (
     <>
       <div className="py-10 flex flex-row">
-        <FilterButton tag="all" color="#ef6c00" onFilterClick={filterByTag} />
-        <FilterButton tag="news" color="#0384C7" onFilterClick={filterByTag} />
+        <FilterButton
+          tag="all"
+          currentTag={ongoingTag}
+          color="#ef6c00"
+          onFilterClick={filterByTag}
+        />
+        <FilterButton
+          tag="news"
+          currentTag={ongoingTag}
+          color="#0384C7"
+          onFilterClick={filterByTag}
+        />
         <FilterButton
           tag="recruitment"
+          currentTag={ongoingTag}
           color="#E45454"
           onFilterClick={filterByTag}
         />
         <FilterButton
           tag="viaggi"
+          currentTag={ongoingTag}
           color="#A14EED"
           onFilterClick={filterByTag}
         />

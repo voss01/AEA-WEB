@@ -42,7 +42,13 @@ function FormatDate(date: Date) {
   );
 }
 
-export default function ProductsCarousel({ variants, tag }: ProductTypes) {
+type ProductsCarouselProps = ProductTypes & { withSlider?: boolean };
+
+export default function ProductsCarousel({
+  variants,
+  tag,
+  withSlider = false,
+}: ProductsCarouselProps) {
   const params = useSearchParams();
 
   const paramTag = params.get("tag")?.replace(/\//g, ""); // Remove all occurrences of '/'
@@ -57,7 +63,7 @@ export default function ProductsCarousel({ variants, tag }: ProductTypes) {
   }, [activeTag, variants]);
 
   return (
-    <div className="px-4">
+    <div>
       {" "}
       {/* Add padding for responsiveness */}
       {/* Carousel Section */}
@@ -65,8 +71,8 @@ export default function ProductsCarousel({ variants, tag }: ProductTypes) {
         opts={{
           align: "start",
         }}
-        displaySlider={true}
-        className="w-full max-w-7xl  mb-2" // Increased max width
+        displaySlider={withSlider}
+        className="w-full  mb-2" // Increased max width
       >
         <CarouselContent>
           {filtered.map((variant) => (

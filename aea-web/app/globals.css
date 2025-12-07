@@ -101,13 +101,20 @@
     @apply mt-6 mb-6 text-7xl font-bold xl:text-9xl flex;
   }
   h2 {
+    @apply mt-6 mb-6 text-4xl font-bold xl:text-5xl flex;
+  }
+  h3 {
     @apply text-2xl xl:text-3xl;
   }
   .subtitle {
     @apply text-xl;
   }
+  .section {
+    @apply px-14 pt-32;
+  }
+
   .slider {
-    @apply w-full max-w-96 flex;
+    @apply w-full max-w-96;
   }
   .example-track {
     @apply bg-black h-px mt-0.5;
