@@ -85,7 +85,7 @@ const ResultsSection = () => {
             </div>
           </div>
 
-          <Button className="hidden md:block py-1 mt-2 text-center">
+          <Button className="hidden sm:block py-1 mt-2 text-center">
             <div className="flex items-center justify-center">
               <div className="text-lg">Scopri</div>
               <div>
@@ -106,6 +106,16 @@ const ResultsSection = () => {
               />
             ))}
           </div>
+        </div>
+        <div className="flex sm:hidden mt-10 w-full justify-center">
+          <Button className="py-1 text-center">
+            <div className="flex items-center justify-center">
+              <div className="text-lg">Scopri</div>
+              <div>
+                <PiArrowRight className="ml-2" />
+              </div>
+            </div>
+          </Button>
         </div>
       </div>
     </>
