@@ -35,16 +35,7 @@ const FolderBox = (tab: FolderBoxProps) => {
   return (
     <div
       key={tab.text}
-      className={`
-               xl:flex
-               space-x-4
-               xl:pt-4
-               sm:my-10
-               xl:my-0
-               w-72
-               h-48
-               relative
-             `}
+      className={"flex md:pt-4 w-full md:w-2/9  md:h-48 relative"}
     >
       {/* SVG background for the border */}
       <div className="absolute inset-0">
@@ -54,7 +45,7 @@ const FolderBox = (tab: FolderBoxProps) => {
           viewBox="0 0 236 163"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full absolute top-0 left-0"
+          className="w-full h-fit md:h-full absolute top-0 left-0"
         >
           <path
             d="M0.5 162.5V0.5H42C50.4 0.5 69 0.5 69 7.5H235V162.5H0.5Z"
@@ -63,15 +54,19 @@ const FolderBox = (tab: FolderBoxProps) => {
         </svg>
       </div>
 
-      <div className="flex flex-col w-full justify-center px-4 relative z-10">
+      <div className="flex flex-col w-full justify-center pl-2 pt-2 md:pt-0  md:px-4 xl:pl-10 relative md:z-10">
         {/* Increased margin-top here */}
         <div
-          className="w-2/3 mb-4 text-7xl font-medium"
+          className="w-2/3 xl:mb-4 text-3xl md:text-5xl xl:text-7xl font-medium"
           style={{ color: tab.color }}
         >
           {tab.text}
         </div>
-        <div className="w-full text-sm">{tab.subtext}</div>
+
+        <div className="hidden md:block w-full text-sm">{tab.subtext}</div>
+        <div className="w-full text-[10px] md:hidden">
+          {tab.subtext.split(" ")[0]}
+        </div>
       </div>
     </div>
   );
@@ -82,7 +77,7 @@ const ResultsSection = () => {
     <>
       <div className="section">
         <div className="flex justify-between flex-row">
-          <div className="w-1/2" aria-roledescription="section title">
+          <div className="md:w-1/2" aria-roledescription="section title">
             <h2>./Risultati ottenuti</h2>
             {/*<div className="px-10 py-4 text-center xl:w-1/2 2xl:w-1/3 md:w-2/3">*/}
             <div className="subtitle">
@@ -90,7 +85,7 @@ const ResultsSection = () => {
             </div>
           </div>
 
-          <Button className="py-1 mt-2 text-center">
+          <Button className="hidden md:block py-1 mt-2 text-center">
             <div className="flex items-center justify-center">
               <div className="text-lg">Scopri</div>
               <div>
@@ -99,9 +94,9 @@ const ResultsSection = () => {
             </div>
           </Button>
         </div>
-        <div className="flex flex-col items-center justify-center pt-20 xl:pt-24 ">
-          <div className="flex-1"></div>
-          <div className="flex flex-wrap justify-center gap-4 mt-8 px-8 xl:px-0 xl:w-3/4 2xl:w-[55%] mx-auto md:w-full">
+
+        <div className="flex items-center justify-center md:pt-24 ">
+          <div className="flex justify-between md:justify-center gap-3 md:gap-4 mt-8 px-0 w-full md:w-3/4 2xl:w-[55%]">
             {tabs.map((tab, index) => (
               <FolderBox
                 key={tab.text}

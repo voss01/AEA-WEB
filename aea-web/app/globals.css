@@ -98,19 +98,19 @@
     @apply bg-background text-foreground;
   }
   h1 {
-    @apply mt-6 mb-6 text-7xl font-bold xl:text-9xl flex;
+    @apply mt-6 mb-6 text-5xl font-bold xl:text-9xl flex;
   }
   h2 {
-    @apply mt-6 mb-6 text-4xl font-bold xl:text-5xl flex;
+    @apply mt-6 mb-4 xl:mb-6 text-2xl font-bold xl:text-5xl flex;
   }
   h3 {
     @apply text-2xl xl:text-3xl;
   }
   .subtitle {
-    @apply text-balance xl:text-xl;
+    @apply text-balance text-sm xl:text-xl;
   }
   .section {
-    @apply px-14 pt-32;
+    @apply px-3 md:px-14 pt-32;
   }
 
   .slider {
