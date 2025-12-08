@@ -107,7 +107,7 @@
     @apply text-2xl xl:text-3xl;
   }
   .subtitle {
-    @apply text-xl;
+    @apply text-balance xl:text-xl;
   }
   .section {
     @apply px-14 pt-32;

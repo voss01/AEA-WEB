@@ -56,6 +56,12 @@ export default function ProductsGrid({
     return variants; // Return all variants if no paramTag is present
   }, [activeTag, variants]);
   var lastIndex = 0;
+  var modulo = 1; // Default value
+  if (window.matchMedia("(min-width: theme(screens.xl))").matches) {
+    modulo = 4; // xl breakpoint
+  } else if (window.matchMedia("(min-width: theme(screens.md))").matches) {
+    modulo = 3; // md breakpoint
+  }
   return (
     <div>
       {" "}
@@ -67,7 +73,7 @@ export default function ProductsGrid({
           return (
             <>
               <div
-                className={" md:basis-1/2 lg:basis-1/3 space-x-1"} // Further reduced space between items with `space-x-1`
+                className={" md:basis-1/2 xl:basis-1/3 space-x-1"} // Further reduced space between items with `space-x-1`
               >
                 <Link
                   href={`/article/${variant.id}?id=${variant.id}&articleID=${variant.productID}&title=${variant.product.title}&type=${variant.productType}&image=${variant.variantImages[0].url}`}
@@ -101,8 +107,12 @@ export default function ProductsGrid({
                   </div>
                 </Link>
               </div>
-              {(index + 1) % 4 == 0 && (
-                <div className={" col-span-4 border-t border-gray-600"}></div>
+              {(index + 1) % modulo == 0 && (
+                <div
+                  className={
+                    "col-span-1 md:col-span-3 xl:col-span-4 border-t border-gray-600"
+                  }
+                ></div>
               )}
             </>
           );
