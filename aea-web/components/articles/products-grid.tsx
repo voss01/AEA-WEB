@@ -56,11 +56,14 @@ export default function ProductsGrid({
     return variants; // Return all variants if no paramTag is present
   }, [activeTag, variants]);
   var lastIndex = 0;
-  var modulo = 1; // Default value
-  if (window.matchMedia("(min-width: theme(screens.xl))").matches) {
-    modulo = 4; // xl breakpoint
-  } else if (window.matchMedia("(min-width: theme(screens.md))").matches) {
-    modulo = 3; // md breakpoint
+  var modulo = 4; // Default value
+  if (typeof window !== "undefined") {
+    const screenWidth = window.innerWidth;
+    if (window.matchMedia("(min-width: 1280px)").matches) {
+      modulo = 4; // xl breakpoint
+    } else if (window.matchMedia("(min-width: 768px)").matches) {
+      modulo = 3; // md breakpoint
+    } else modulo = 1;
   }
   return (
     <div>
@@ -117,8 +120,12 @@ export default function ProductsGrid({
             </>
           );
         })}
-        {(lastIndex + 1) % 4 != 0 && ( //if no line have been put to the end yet
-          <div className={" col-span-4 border-t border-gray-600"}></div>
+        {(lastIndex + 1) % modulo != 0 && ( //if no line have been put to the end yet
+          <div
+            className={
+              "col-span-1 md:col-span-3 xl:col-span-4 border-t border-gray-600"
+            }
+          ></div>
         )}
       </div>
     </div>

@@ -20,7 +20,7 @@ function FilterButton({
   return (
     <Button
       className={cn(
-        "cursor-pointer mr-6 px-4 rounded-tl-xl text-white hover:opacity-100",
+        "cursor-pointer md:mr-6 p-3 md:px-4 rounded-tl-xl text-white hover:opacity-100",
         currentTag === tag || (!currentTag && tag == "all")
           ? "opacity-100"
           : "opacity-50"
@@ -55,7 +55,7 @@ export default function FilteredProductsDisplay({
 
   return (
     <>
-      <div className="py-10 flex flex-row">
+      <div className="flex flex-row justify-start gap-2 md:gap-1 mt-8 md:py-10 w-full md:w-3/4 2xl:w-[55%]">
         <FilterButton
           tag="all"
           currentTag={ongoingTag}

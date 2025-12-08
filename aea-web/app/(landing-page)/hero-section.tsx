@@ -100,64 +100,69 @@ const HeroSection = () => {
       <div className="flex justify-start md:justify-center px-4 md:px-8 pt-2 mt-12">
         <div className="flex w-3/4">
           {/* Content for larger screens */}
-          <div className="hidden md:flex justify-center px-8 pt-2">
-            <div className="flex w-2/3">
-              <div className="w-1/2 text-left xl:text-8xl lg:text-8xl md:text-3xl font-medium">
-                <div>
-                  <a className="text-orange-500">Automation </a>Engineering
-                  Association
-                </div>
-                <div className="pt-2 text-sm lg:text-sm flex flex-row whitespace-nowrap">
-                  Innovation and robotics for students by students
-                </div>
+          {isSmallScreen ? (
+            <div className="flex flex-col w-full text-left items-start">
+              <div className="text-5xl text-orange-500">Automation</div>
+              <div className="text-5xl font-medium">
+                Engineering Association
               </div>
-            </div>
-          </div>
-
-          <div className="hidden md:flex justify-center px-8 pt-2">
-            <div className="flex w-2/3">
-              <div className="w-1/2 text-left xl:text-5xl lg:text-4xl md:text-3xl font-medium">
-                {/* Text content */}
+              <div className="mt-2 text-base">
+                Innovation and robotics for students by students
               </div>
-              <div className="w-1/2 flex flex-col items-center">
-                <img
-                  src="/arlo/arloHome.png"
-                  alt="Descriptive Alt Text"
-                  className="min-w-[200px] h-auto"
-                />
-                <Link href="/welcome">
-                  <Button className="py-1 mt-2 text-center">
-                    <div className="flex items-center justify-center">
-                      <div className="text-lg">Join us</div>
-                      <div>
-                        <PiArrowRight className="ml-2" />
-                      </div>
+              <Link href="/welcome">
+                <Button className="py-2 mt-4 text-center mx-auto">
+                  <div className="flex items-center justify-center">
+                    <div className="text-lg">Join us</div>
+                    <div>
+                      <PiArrowRight className="ml-2" />
                     </div>
-                  </Button>
-                </Link>
-              </div>
+                  </div>
+                </Button>
+              </Link>
             </div>
-              
-          </div>
-
-          {/* Content for smaller screens */}
-          <div className="flex flex-col md:hidden w-full text-left items-start">
-            <div className="text-5xl text-orange-500">Automation</div>
-            <div className="text-5xl font-medium">Engineering Association</div>
-            <div className="mt-2 text-base">
-              Innovation and robotics for students by students
-            </div>
-            <Link href="/welcome">
-              <Button className="py-2 mt-4 text-center mx-auto">
-                <div className="flex items-center justify-center">
-                  <div className="text-lg">Join us</div>
-                  <div>
-                    <PiArrowRight className="ml-2" />
+          ) : (
+            <>
+              <div className="flex justify-center px-8 pt-2">
+                <div className="flex w-2/3">
+                  <div className="w-1/2 text-left xl:text-8xl lg:text-8xl md:text-3xl font-medium">
+                    <div>
+                      <a className="text-orange-500">Automation </a>Engineering
+                      Association
+                    </div>
+                    <div className="pt-2 text-sm lg:text-sm flex flex-row whitespace-nowrap">
+                      Innovation and robotics for students by students
+                    </div>
                   </div>
                 </div>
-              </Button>
-            </Link>
-          </div>
+              </div>
+
+              <div className="flex justify-center px-8 pt-2">
+                <div className="flex w-2/3">
+                  <div className="w-1/2 text-left xl:text-5xl lg:text-4xl md:text-3xl font-medium">
+                    {/* Text content */}
+                  </div>
+                  <div className="w-1/2 flex flex-col items-center">
+                    <img
+                      src="/arlo/arloHome.png"
+                      alt="Descriptive Alt Text"
+                      className="min-w-[200px] h-auto"
+                    />
+                    <Link href="/welcome">
+                      <Button className="py-1 mt-2 text-center">
+                        <div className="flex items-center justify-center">
+                          <div className="text-lg">Join us</div>
+                          <div>
+                            <PiArrowRight className="ml-2" />
+                          </div>
+                        </div>
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+                  
+              </div>
+            </>
+          )}
         </div>
       </div>
 
