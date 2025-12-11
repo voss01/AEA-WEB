@@ -26,7 +26,7 @@ const Footer = () => {
     >
       <div className="flex justify-end w-2/3 pt-10 pr-10 border-t-2 border-t-slate-500">
         {/*<div className="lg:flex lg:space-x-32 md:px-0 ">*/}
-        <div className="flex w-1/2 flex-row justify-around">
+        <div className="flex w-full lg:w-3/4 2xl:w-1/2 flex-row justify-around">
           <div className="flex ">
             <div className="flex space-x-2">
               <a href="https://www.instagram.com/aeapolimi/" target="_blank">
