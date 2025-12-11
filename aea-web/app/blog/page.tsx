@@ -55,7 +55,7 @@ export default async function LandingPage() {
       <div className="pt-10 flex flex-row items-center">
         <h3>All Articles</h3>
       </div>
-      <FilteredProductsDisplay variants={full_data} />
+      <FilteredProductsDisplay variants={data} />
       <div className="pt-28"></div>
       <h2>./Want more ?</h2>
 
