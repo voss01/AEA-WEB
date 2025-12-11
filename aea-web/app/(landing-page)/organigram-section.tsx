@@ -216,7 +216,7 @@ const SixthSection = () => {
             >
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-3xl font-medium text-center xl:text-5xl xl:w-1/2">
-                  <h3>// Board</h3>
+                  <h3>{"// Board"}</h3>
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="grid grid-cols-2 gap-8 mb-6 lg:mb-16 lg:mt-16">
@@ -276,7 +276,7 @@ const SixthSection = () => {
               </AccordionItem>
               <AccordionItem value="item-2">
                 <AccordionTrigger className="text-3xl font-medium text-center xl:text-5xl xl:w-1/2">
-                  <h3>// Direttivo</h3>
+                  <h3>{"// Direttivo"}</h3>
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="grid grid-cols-2 gap-8 mb-6 lg:mb-16 lg:mt-16">

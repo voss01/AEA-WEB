@@ -142,7 +142,7 @@ const HeroSection = () => {
                     {/* Text content */}
                   </div>
                   <div className="w-1/2 flex flex-col items-center">
-                    <img
+                    <Image
                       src="/arlo/arloHome.png"
                       alt="Descriptive Alt Text"
                       className="min-w-[200px] h-auto"
@@ -228,7 +228,7 @@ const HeroSection = () => {
       ) : (
         <div className="flex  xl:space-x-4 items-center justify-between hover:cursor-pointer gap-4 w-4/5 xl:w-3/4 2xl:w-[55%]">
           {tabs.map((tab) => (
-            <Link href={tab.href}>
+            <Link href={tab.href} key={tab.name}>
               <motion.div
                 key={tab.name}
                 className={`
