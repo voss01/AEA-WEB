@@ -1,8 +1,8 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Badge } from "../ui/badge";
-import { useRouter, useSearchParams, usePathname } from "next/navigation";
 
 export default function ProductTags() {
   const router = useRouter();
