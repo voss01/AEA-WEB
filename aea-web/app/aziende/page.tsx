@@ -6,9 +6,9 @@ import Footer from "@/components/footer";
 const Aziende = () => {
   return (
     <>
-    {/* 
+    {
       <HeroParallaxDemo />
-    */}
+    }
       
     </>
   );
