@@ -6,7 +6,7 @@ import { Check, Copy } from "lucide-react";
 export default function Welcome() {
   
 
-  const iban = "IT51K0569601620000010602X50";
+  const iban = "IT21R0538701647000049464062";
   const beneficiary = "Nome Beneficiario";
 
   const [copiedItem, setCopiedItem] = useState<string | null>(null);
@@ -96,7 +96,7 @@ export default function Welcome() {
               </div>
               <h3 className="text-lg font-semibold">Paga la quota di 10€</h3>
               <p className="text-gray-500 text-sm">
-                Sul seguente iban IT51K0569601620000010602X50, la causale deve essere “quota associativa [NOME COGNOME], Beneficiario: Automation Engineering Association
+                Sul seguente iban IT21R0538701647000049464062, la causale deve essere “quota associativa [NOME COGNOME], Beneficiario: Automation Engineering Association
               </p>
              
               <Button
