@@ -90,7 +90,7 @@ const peopleBoard = [
     description: "",
     listItems: [
       {
-        url: "#",
+        url: "https://www.linkedin.com/in/mauro-ingenito/",
         icon: "/icons/linkedin.webp",
       },
     ],
