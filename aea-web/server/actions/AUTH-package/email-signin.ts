@@ -13,6 +13,12 @@ import { AuthError } from 'next-auth';
 export const emailSignIn = action.schema(LoginSchema).action(
     async ({ parsedInput: { email, password, code } }) => {
 
+      //email verification 
+      const domain = email.split("@")[1];
+      if (domain !== "aeapolimi.it") {
+        return {error: "use your @aeapolimi.it"};
+      }
+
         try{
   const existingUser = await db.query.users.findFirst({
             where: eq(users.email, email)
