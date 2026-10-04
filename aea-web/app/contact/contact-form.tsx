@@ -36,8 +36,6 @@ import {
 
 import { Input } from "@/components/ui/input";
 
-
-
 import { Textarea } from "@/components/ui/textarea";
 import { PiCheckLight } from "react-icons/pi";
 
@@ -86,7 +84,6 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-
   const form = useForm<FormValues>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -116,7 +113,6 @@ export default function ContactForm() {
 
       setSubmitted(true);
     } catch (error) {
-     
     } finally {
       setLoading(false);
     }
@@ -124,55 +120,48 @@ export default function ContactForm() {
 
   return (
     <div
-    style={{
-      height: "100%",
-      width: "100%",
-      position: "relative",
-      overflow: "hidden",
-    }}
-    
-    className="md:flex  justify-center pt-20 px-8">
-            <div>
-          <div className="text-5xl font-medium w-2/3">
-            Contattaci
-          </div>
-          <div
-            className="
+      style={{
+        height: "100%",
+        width: "100%",
+        position: "relative",
+        overflow: "hidden",
+      }}
+      className="md:flex  justify-center pt-20 px-8"
+    >
+      <div>
+        <div className="text-5xl font-medium w-2/3">Contattaci</div>
+        <div
+          className="
               
               py-4
               text-gray-500
                     "
-          >
-            Sei un azienda? Scrivici qui
+        >
+          Sei un azienda? Scrivici qui
+        </div>
+
+        <div className="bg-[#f6f5f4] md:w-4/5 space-y-6 p-4 rounded-lg my-4">
+          <div className="flex gap-4 border-b ">
+            <PiCheckLight className="text-2xl " />
+
+            <div className=" font-normal pb-4 w-80">
+              Organizzazione Workshop
+            </div>
           </div>
 
-          <div className="bg-[#f6f5f4] md:w-4/5 space-y-6 p-4 rounded-lg my-4">
-            <div className="flex gap-4 border-b ">
-              <PiCheckLight className="text-2xl " />
+          <div className="flex gap-4 border-b ">
+            <PiCheckLight className="text-2xl " />
 
-              <div className=" font-normal pb-4 w-80">
-             Organizzazione Workshop
-              </div>
-            </div>
+            <div className=" font-normal pb-4 w-80">Visite in azienda</div>
+          </div>
 
-            <div className="flex gap-4 border-b ">
-              <PiCheckLight className="text-2xl " />
+          <div className="flex gap-4  ">
+            <PiCheckLight className="text-2xl " />
 
-              <div className=" font-normal pb-4 w-80">
-                Visite in azienda
-              </div>
-            </div>
-
-            <div className="flex gap-4  ">
-              <PiCheckLight className="text-2xl " />
-
-              <div className=" font-normal pb-4 w-80">
-               Partnership
-              </div>
-            </div>
+            <div className=" font-normal pb-4 w-80">Partnership</div>
           </div>
         </div>
-  
+      </div>
 
       <Form {...form}>
         {!submitted ? (
@@ -189,8 +178,7 @@ export default function ContactForm() {
                 name="first_name"
                 render={({ field }) => (
                   <FormItem className="items-center justify-center  w-full">
-                    <FormLabel className="text-sm ">
-                         Nome *</FormLabel>
+                    <FormLabel className="text-sm ">Nome *</FormLabel>
                     <FormControl>
                       <Input {...field} />
                     </FormControl>
@@ -218,8 +206,8 @@ export default function ContactForm() {
               render={({ field }) => (
                 <FormItem className="items-center justify-center  w-full">
                   <FormLabel className=" text-sm   ">
-                    elamil di lavoro *
-                    </FormLabel>
+                    E-mail aziendale *
+                  </FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
@@ -227,23 +215,18 @@ export default function ContactForm() {
               )}
             />
 
-
-
-<FormField
+            <FormField
               control={form.control}
               name="company_name"
               render={({ field }) => (
                 <FormItem className="items-center justify-center  w-full">
-                  <FormLabel className="w-60 text-sm">
-                    Nome azienda *
-                    </FormLabel>
+                  <FormLabel className="w-60 text-sm">Nome azienda *</FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
                 </FormItem>
               )}
             />
-   
 
             <FormField
               control={form.control}
@@ -276,14 +259,13 @@ export default function ContactForm() {
               )}
             />
 
-
             <FormField
               control={form.control}
               name="help"
               render={({ field }) => (
                 <FormItem className="items-center justify-center  w-full">
                   <FormLabel className="w-60 text-sm   ">
-                   Come possiamo aiutare ? 
+                    Come possiamo aiutare ?
                   </FormLabel>
                   <Select
                     onValueChange={field.onChange}
@@ -297,14 +279,12 @@ export default function ContactForm() {
                     <SelectContent>
                       <div className="flex gap-4">
                         <SelectItem value="Evaluate Bird for my company">
-                         Workshop
+                          Workshop
                         </SelectItem>
                       </div>
                       <SelectItem value="Conferenza">Learn More</SelectItem>
                       <SelectItem value="Visita">Get a Quote</SelectItem>
-                      <SelectItem value="Workshop">
-                      Workshop
-                      </SelectItem>
+                      <SelectItem value="Workshop">Workshop</SelectItem>
                       <SelectItem value="Other">Other</SelectItem>
                     </SelectContent>
                   </Select>
@@ -317,9 +297,7 @@ export default function ContactForm() {
               name="info"
               render={({ field }) => (
                 <FormItem className="items-center justify-center w-full">
-                  <FormLabel className="w-60 text-sm   ">
-                   Altro ? 
-                  </FormLabel>
+                  <FormLabel className="w-60 text-sm   ">Altro ?</FormLabel>
                   <FormControl>
                     <Textarea style={{ height: "100px" }} {...field} />
                   </FormControl>
@@ -353,8 +331,8 @@ export default function ContactForm() {
           </form>
         ) : (
           <>
-                  <div
-          className="
+            <div
+              className="
         text-xl 
         md:text-2xl 
         flex 
@@ -367,23 +345,22 @@ export default function ContactForm() {
         px-8
 
         "
-        >
-          <div className="w-80">
+            >
+              <div className="w-80">
+                <Image
+                  src="/assets/MeditatingDoodle.svg"
+                  alt="logo"
+                  width={1000}
+                  height={1000}
+                  className="mx-auto"
+                />
 
-          <Image
-            src="/assets/MeditatingDoodle.svg"
-            alt="logo"
-            width={1000}
-            height={1000}
-            className="mx-auto"
-          />
-
-          <div className="text-gray-500 font-light  text-center justify-center mx-auto py-10"> 
-          We&apos;ve received your inquiry and will be contacting you via email shortly.
-          </div>
-      
-        </div>
-        </div>
+                <div className="text-gray-500 font-light  text-center justify-center mx-auto py-10">
+                  We&apos;ve received your inquiry and will be contacting you
+                  via email shortly.
+                </div>
+              </div>
+            </div>
           </>
         )}
       </Form>

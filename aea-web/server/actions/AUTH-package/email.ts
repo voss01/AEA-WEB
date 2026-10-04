@@ -31,7 +31,7 @@ export const sendVerificationEmail = async (email: string, token: string) =>{
     console.log("link:"+ confirmLink)
     
   const { data, error } = await resend.emails.send({
-    from: 'AEA <onboarding@resend.dev>',
+    from: 'AEA <login@aeapolimi.it>',
     to: email,
     subject: 'REGISTRAZIONE',
     react: EmailTemplate_confirm_Email({ confirmationLink: confirmLink }),  // Pass the correct confirmation link
@@ -65,7 +65,7 @@ export const sendPasswordResetEmail = async (email: string, token: string) =>{
     console.log("link:"+ confirmLink)
     
   const { data, error } = await resend.emails.send({
-    from: 'AEA <onboarding@resend.dev>',
+    from: 'AEA <login@aeapolimi.it>',
     to: email,
     subject: 'RESETTA LA PASSWORD',
     react: EmailTemplate_reset_password({ confirmationLink: confirmLink }),  // Pass the correct confirmation link
@@ -93,7 +93,7 @@ export const sendTwoFactorTokenByEmail = async (email: string, token: string) =>
 
     
   const { data, error } = await resend.emails.send({
-    from: 'AEA <onboarding@resend.dev>',
+    from: 'AEA <login@aeapolimi.it>',
     to: email,
     subject: 'your two factor token',
     react: EmailTemplate_token_Email({ token: Token }),  // Pass the correct confirmation link

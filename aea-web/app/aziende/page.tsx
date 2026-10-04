@@ -1,7 +1,6 @@
-"use client";
-import { HeroParallaxDemo } from "./aziende-content";
-import Construction from "./construction";
-import Footer from "@/components/footer";
+//"use client";
+
+import DinoGame from "@/components/dinoGame";
 
 const Aziende = () => {
   return (

@@ -1,7 +1,4 @@
 
-
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -61,6 +58,9 @@
     --ring: 222.2 84% 4.9%;
  
     --radius: 0.5rem;
+
+    --font-main: "JetBrains Mono", monospace;
+    --font-secondary: "Mulish", sans-serif;
   }
  
   .dark {
@@ -98,7 +98,20 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-main);
+  }
+
+  p,
+  small, 
+  textarea,
+  input{
+    font-family: var(--font-secondary);
+  }
+
+  .font-secondary {
+    font-family: var(--font-secondary);
   }
 }
