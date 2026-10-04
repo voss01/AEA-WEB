@@ -1,19 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 import { motion } from "framer-motion";
-
 import { useInView } from "framer-motion";
-
-
 import { useMediaQuery } from "react-responsive";
-
-
 
 import {
   PiArrowRight,
@@ -25,6 +18,7 @@ import {
   PiWineDuotone,
   PiBriefcaseDuotone,
   PiGearDuotone,
+  PiNewspaperDuotone,
 } from "react-icons/pi";
 
 
@@ -65,24 +59,11 @@ const tabs = [
   {
     icon: (
       <PiWineDuotone className="p-1 mr-2 text-3xl text-yellow-600 bg-yellow-100 rounded-md" />
+
     ),
     name: "Eventi",
-    description: "Scopri dove puoi trovarci",
-    more: (
-      <div className="flex items-center text-yellow-600">
-       Scopri <PiArrowRight className="ml-1 text-sm" />
-      </div>
-    ),
-
-    image: "/assets/eventi.jpg",
-  },
-  {
-    icon: (
-      <PiAirplaneTakeoffDuotone className="p-1 mr-2 text-3xl text-purple-600 bg-purple-100 rounded-md" />
-    ),
-    name: "Viaggi",
-    feature: "rimborsati",
-    description: "Viaggi in tutto il mondo",
+    feature: "rimborsati", //cos'e???
+    description: "Tanti eventi da scoprire",
     more: (
       <Link href="/viaggi">
       <div className="flex items-center text-purple-600">
@@ -91,6 +72,23 @@ const tabs = [
       </Link>
     ),
     image: "/assets/viaggi.jpeg",
+  },
+
+  {
+    icon: (
+      <PiNewspaperDuotone className="p-1 mr-2 text-3xl text-purple-600 bg-purple-100 rounded-md" />
+    ),
+    name: "Blog",
+    description: "Scopri le ultime informazioni",
+    more: (
+      <Link href="/blog">
+      <div className="flex items-center text-yellow-600">
+       Scopri <PiArrowRight className="ml-1 text-sm" />
+      </div>
+      </Link>
+    ),
+
+    image: "/assets/eventi.jpg",
   },
 ];
 

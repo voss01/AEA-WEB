@@ -1,3 +1,5 @@
+//NOTA: il seguente codice riguarda la pagina presente sul sito come "Eventi"
+
 "use client";
 import React from "react";
 import { FaInstagram } from "react-icons/fa";
@@ -396,8 +398,8 @@ export function GlobeDemo() {
     },
   ];
   return (
-    <div className="flex flex-row items-center justify-center py-20 h-full md:h-auto dark:bg-black bg-white relative w-full">
-      <div className="max-w-7xl mx-auto w-full relative h-full md:h-[40rem] px-4">
+    <div className="flex flex-row items-center justify-center py-20 h-auto md:h-auto dark:bg-black bg-white relative w-full">
+      <div className="max-w-7xl mx-auto w-full relative h-full md:h-auto px-4">
         <motion.div
           initial={{
             opacity: 0,
@@ -413,13 +415,13 @@ export function GlobeDemo() {
           className="div"
         >
           <h1 className="text-center text-5xl md:text-7xl font-extrabold text-black dark:text-white mb-6">
-            Viaggi
+            Eventi
           </h1>
           <p className="text-center text-lg md:text-2xl font-normal text-neutral-700 dark:text-neutral-300 mt-2 mb-4">
             Rimani aggiornato
           </p>
           <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto mb-4">
-            Organizziamo anche dei viaggi: unisciti a noi se vuoi farne parte!
+            Organizziamo anche molti eventi: unisciti a noi se vuoi partecipare anche tu!
           </p>
         </motion.div>
     <div className="flex justify-center mt-4">
@@ -434,23 +436,29 @@ export function GlobeDemo() {
     </Button>
         </a>
     </div>
-      <div className="flex justify-center items-stretch gap-6 mt-10 px-4 flex-wrap">
+      {/*<div className="flex justify-center items-stretch gap-6 mt-10 px-4 flex-wrap">*/}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 px-4 max-w-5xl mx-auto justify-items-center">
         <TravelCard 
               title="Mecspe Bologna" 
-              image="/placeholder_small.svg"
+              image="/eventi foto/mecspe 2026.png"
               date="Marzo 2026"
               info="Fiera di Automazione"/>
         <TravelCard 
-              title="dnf" 
-              image="/placeholder_small.svg"
-              date="Marzo 2026"
-              info="dnf"/>
+              title="Sede Cisco " 
+              image="/eventi foto/cisco cutted.png"
+              date="Aprile 2026"
+              info="Leader mondiale nella tecnologia"/>
         <TravelCard 
-              title="E-Tech Bologna" 
-              image="/placeholder_small.svg"
-              date="Ottobre 2026"
-              info="Conference su Tecnologia"/>
-      </div>
+              title="Sede Reply" 
+              image="/eventi foto/reply.png"
+              date="Aprile 2026"
+              info="Azienda leader nelle nuove tecnologie"/>
+        <TravelCard 
+              title="Festa dei 5 anni" 
+              image="/eventi foto/festa_5_anni.png"
+              date="Maggio 2026"
+              info="Abbiamo festeggiato i 5 anni di AEA"/>
+    </div>
     </div>
     </div>
   );

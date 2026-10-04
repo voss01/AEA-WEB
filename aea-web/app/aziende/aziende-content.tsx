@@ -15,7 +15,7 @@ export function HeroParallaxDemo() {
           Rimani aggiornato
         </p>
         <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto mb-4">
-          Collaboriamo con varie aziende. Eccone alcune!
+          Collaboriamo con diverse aziende. Eccone alcune!
         </p>
 
         <div className="flex flex-col items-center mt-4">
@@ -122,99 +122,3 @@ export function HeroParallaxDemo() {
     </div>
   );
 }
-
-/*export const products = [
-  {
-    title: "Arduino",
-    link: "#",
-    thumbnail:
-      "/logos/Arduino_Logo 1.svg",
-  },
-  {
-    title: "Agade",
-    link: "#",
-    thumbnail:
-      "/logos/agade.webp",
-  },
-  {
-    title: "Fanuc",
-    link: "https://userogue.com",
-    thumbnail:
-      "/logos/Fanuc_logo 1.svg",
-  },
-
-  {
-    title: "Fanuc",
-    link: "#",
-    thumbnail:
-      "/logos/Fanuc_logo 1.svg",
-  },
-  {
-    title: "Fanuc",
-    link: "#",
-    thumbnail:
-      "/logos/Fanuc_logo 1.svg",
-  },
-  {
-    title: "ST",
-    link: "#",
-    thumbnail:
-      "/logos/ST_logo_2020_blue_V 1.svg",
-  },
-
-  {
-    title: "Bending Spoons",
-    link: "#",
-    thumbnail:
-      "/logos/bendingS.png",
-  },
-  {
-    title: "fae",
-    link: "#",
-    thumbnail:
-      "/logos/fae.jpeg",
-  },
-  {
-    title: "Arduino",
-    link: "#",
-    thumbnail:
-      "/logos/Arduino_Logo 1.svg",
-  },
-  {
-    title: "St",
-    link: "#",
-    thumbnail:
-      "/logos/ST_logo_2020_blue_V 1.svg",
-  },
-  {
-    title: "Amazon",
-    link: "#",
-    thumbnail:
-      "/logos/Amazon.svg",
-  },
-
-  {
-    title: "maker faire",
-    link: "#",
-    thumbnail:
-      "/logos/makerFaire.jpeg",
-  },
-  {
-    title: "Amazon",
-    link: "#",
-    thumbnail:
-      "/logos/Amazon.svg",
-  },
-  {
-    title: "Arduino",
-    link: "#",
-    thumbnail:
-      "/logos/Arduino_Logo 1.svg",
-  },
-  {
-    title: "Bending Spoons",
-    link: "#",
-    thumbnail:
-      "/logos/bendingS.png",
-  },
-];*/
