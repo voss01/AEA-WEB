@@ -1,8 +1,12 @@
+//NOTA: il seguente codice riguarda la pagina presente sul sito come "Eventi"
+
 "use client";
 import React from "react";
+import { FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
-
+import { Button } from "@/components/ui/button";
+import TravelCard from "@/components/travelcard.jsx";
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
   ssr: false,
 });
@@ -21,7 +25,7 @@ export function GlobeDemo() {
     ambientLight: "#38bdf8",
     directionalLeftLight: "#ffffff",
     directionalTopLight: "#ffffff",
-    pointLight: "#ffffff",
+    pointLight: "#fa1313ff",
     arcTime: 1000,
     arcLength: 0.9,
     rings: 1,
@@ -393,10 +397,9 @@ export function GlobeDemo() {
       color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
   ];
-
   return (
-    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-black bg-white relative w-full">
-      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
+    <div className="flex flex-row items-center justify-center py-20 h-auto md:h-auto dark:bg-black bg-white relative w-full">
+      <div className="max-w-7xl mx-auto w-full relative h-full md:h-auto px-4">
         <motion.div
           initial={{
             opacity: 0,
@@ -411,18 +414,52 @@ export function GlobeDemo() {
           }}
           className="div"
         >
-          <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
-            Viaggi
-          </h2>
-          <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
-            Ogni anno cerchiamo le fiere e gli eventi migliori di robotica da visitare
+          <h1 className="text-center text-5xl md:text-7xl font-extrabold text-black dark:text-white mb-6">
+            Eventi
+          </h1>
+          <p className="text-center text-lg md:text-2xl font-normal text-neutral-700 dark:text-neutral-300 mt-2 mb-4">
+            Rimani aggiornato
+          </p>
+          <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto mb-4">
+            Organizziamo anche molti eventi: unisciti a noi se vuoi partecipare anche tu!
           </p>
         </motion.div>
-        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
-        <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
-          <World data={sampleArcs} globeConfig={globeConfig} />;
-        </div>
-      </div>
+    <div className="flex justify-center mt-4">
+        <a
+          href="https://www.instagram.com/aeapolimi?igsh=bzQ4NTlsZXVhajll"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+    <Button className="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 flex items-center justify-center gap-2">
+        <span className="text-lg">Seguici su</span>
+          <FaInstagram className="h-[24px] w-[24px]"/>
+    </Button>
+        </a>
+    </div>
+      {/*<div className="flex justify-center items-stretch gap-6 mt-10 px-4 flex-wrap">*/}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 px-4 max-w-5xl mx-auto justify-items-center">
+        <TravelCard 
+              title="Mecspe Bologna" 
+              image="/eventi foto/mecspe 2026.png"
+              date="Marzo 2026"
+              info="Fiera di Automazione"/>
+        <TravelCard 
+              title="Sede Cisco " 
+              image="/eventi foto/cisco cutted.png"
+              date="Aprile 2026"
+              info="Leader mondiale nella tecnologia"/>
+        <TravelCard 
+              title="Sede Reply" 
+              image="/eventi foto/reply.png"
+              date="Aprile 2026"
+              info="Azienda leader nelle nuove tecnologie"/>
+        <TravelCard 
+              title="Festa dei 5 anni" 
+              image="/eventi foto/festa_5_anni.png"
+              date="Maggio 2026"
+              info="Abbiamo festeggiato i 5 anni di AEA"/>
+    </div>
+    </div>
     </div>
   );
 }
