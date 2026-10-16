@@ -25,6 +25,7 @@ import {
   PiWineDuotone,
   PiBriefcaseDuotone,
   PiGearDuotone,
+  PiNewspaperDuotone,
 } from "react-icons/pi";
 
 
@@ -91,32 +92,34 @@ export function Menu() {
                 <div className="flex items-center gap-1 p-1 rounded-sm hover:bg-gray-400/10">
                   <PiGearDuotone className="mr-2 text-2xl text-red-600" />
                   <div className="">
-                    <a>Progetti</a>
-                    <p className="text-sm font-light text-gray-400">
-                      Applica ciò che hai imparato a lezione
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-1 p-1 rounded-sm hover:bg-gray-400/10">
-                  <PiWineDuotone className="mr-2 text-2xl text-yellow-600" />
-                  <div className="">
-                    <Link href={"/blog/?tag=news"}>
-                      <a>Eventi</a>
+                    <Link href={"\progetti"}> 
+                      <a>Progetti</a>
                       <p className="text-sm font-light text-gray-400">
-                        Scopri dove puoi trovarci
+                         Applica ciò che hai imparato a lezione
                       </p>
                     </Link>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-1 p-1 rounded-sm hover:bg-gray-400/10">
-                  <PiAirplaneTakeoffDuotone className="mr-2 text-2xl text-purple-600" />
+                  <PiWineDuotone className="mr-2 text-2xl text-yellow-600" />
                   <div className="">
                     <Link href={"/viaggi"}>
-                      <a>Viaggi</a>
+                      <a>Eventi</a>
                       <p className="text-sm font-light text-gray-400">
-                        Viaggi in tutto il mondo
+                        Tanti eventi da scoprire
+                      </p>
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-1 p-1 rounded-sm hover:bg-gray-400/10">
+                  <PiNewspaperDuotone className="mr-2 text-2xl text-purple-600" />
+                  <div className="">
+                    <Link href={"/blog/?tag=news"}>
+                      <a>Blog</a>
+                      <p className="text-sm font-light text-gray-400">
+                        Scopri le ultime informazioni
                       </p>
                     </Link>
                   </div>
@@ -140,13 +143,13 @@ export function Menu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+       {/* <NavigationMenuItem>
           <Link href="/blog" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Blog
             </NavigationMenuLink>
           </Link>
-        </NavigationMenuItem>
+        </NavigationMenuItem>*/}
 
         <NavigationMenuItem>
           <Link href="/contact" legacyBehavior passHref>
