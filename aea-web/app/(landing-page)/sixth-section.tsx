@@ -19,30 +19,30 @@ const font = Lora({
 const peopleBoard = [
   {
     heading: {
-      text: "Andrea Venezia",
-      image: "/images/direttivo/1.png",
-      alt: "Andrea Venezia",
+      text: "Massimiliano Menzolini",
+      image: "/images/direttivo/direttivo_waiting.png",
+      alt: "Massimiliano Menzolini",
     },
     subtext: "Presidente",
     description: "",
     listItems: [
       {
-        url: "https://www.linkedin.com/in/andrea-venezia-2b3294263/",
+        url: "https://www.linkedin.com/in/massimiliano-menzolini-986109250",
         icon: "/icons/linkedin.webp",
       },
     ],
   },
   {
     heading: {
-      text: "Gabriel Voss",
-      image: "/images/direttivo/3.png",
-      alt: "Gabriel Voss",
+      text: "Mauro Ingenito",
+      image: "/images/direttivo/direttivo_waiting.png",
+      alt: "Mauro Ingenito",
     },
     subtext: "Vicepresidente",
     description: "",
     listItems: [
       {
-        url: "https://www.linkedin.com/in/gabriel-voss-256501181",
+        url: "https://www.linkedin.com/in/mauro-ingenito/",
         icon: "/icons/linkedin.webp",
       },
     ],
@@ -51,7 +51,7 @@ const peopleBoard = [
   {
     heading: {
       text: "Giovanni Miccio",
-      image: "/images/direttivo/8.png",
+      image: "/images/direttivo/direttivo_waiting.png",
       alt: "Giovanni Miccio",
     },
     subtext: "Tesoriere",
@@ -66,31 +66,15 @@ const peopleBoard = [
 
   {
     heading: {
-      text: "Costanza Marafante",
-      image: "/images/direttivo/4.png",
-      alt: "Costanza Marafante",
-    },
-    subtext: "Vicepresidente",
-    description: "",
-    listItems: [
-      {
-        url: "https://it.linkedin.com/in/costanza-marafante",
-        icon: "/icons/linkedin.webp",
-      },
-    ],
-  },
-
-  {
-    heading: {
-      text: "Mauro Ingenito",
-      image: "/images/direttivo/12.png",
-      alt: "Mauro Ingenito",
+      text: "Andrea Mastrogiuseppe",
+      image: "/images/direttivo/direttivo_waiting.png",
+      alt: "Andrea Mastrogiuseppe",
     },
     subtext: "Segretario",
     description: "",
     listItems: [
       {
-        url: "https://www.linkedin.com/in/mauro-ingenito/",
+        url: "https://www.linkedin.com/in/andrea-mastrogiuseppe-bb7a73334?utm_source=share_via&utm_content=profile&utm_medium=member_android",
         icon: "/icons/linkedin.webp",
       },
     ],
@@ -100,30 +84,61 @@ const peopleBoard = [
 const peopleDirettivo = [
   {
     heading: {
-      text: "Caterina Viola",
-      image: "/images/direttivo/11.png",
-      alt: "Caterina Viola",
+      text: "Elena Coghe",
+      image: "/images/direttivo/direttivo_waiting.png",
+      alt: "Elena Coghe",
     },
-    subtext: "Dev Ops",
+    subtext: "Team Progetti",
     description: "",
     listItems: [
       {
-        url: "https://www.linkedin.com/in/caterinaviola/",
+        url: "https://www.linkedin.com/in/elena-coghe-5a2a7524a",
         icon: "/icons/linkedin.webp",
       },
     ],
   },
   {
     heading: {
-      text: "Oscar Lovato",
-      image: "/images/direttivo/9.png",
-      alt: "Oscar Lovato",
+      text: "Giacomo Monaco",
+      image: "/images/direttivo/direttivo_waiting.png",
+      alt: "Giacomo Monaco",
     },
     subtext: "Team Aziende",
     description: "",
     listItems: [
       {
-        url: "https://www.linkedin.com/in/oscar-lovato-a20392201/",
+        url: "https://www.linkedin.com/in/giacomo-monaco-2438351b9?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+        icon: "/icons/linkedin.webp",
+      },
+    ],
+  },
+  {
+    heading: {
+      text: "Matteo Oggioni",
+      image: "/images/direttivo/direttivo_waiting.png",
+      alt: "Matteo Oggioni",
+    },
+
+    subtext: "Team DevOps",
+    description: "",
+    listItems: [
+      {
+        url: "https://www.linkedin.com/in/matteo-oggioni-2790bb43a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+        icon: "/icons/linkedin.webp",
+      },
+    ],
+  },
+  {
+    heading: {
+      text: "Matilde Rizzo",
+      image: "/images/direttivo/direttivo_waiting.png",
+      alt: "Matilde Rizzo",
+    },
+    subtext: "Team Eventi",
+    description: "",
+    listItems: [
+      {
+        url: "https://www.linkedin.com/in/matilde-rizzo-0497483b3",
         icon: "/icons/linkedin.webp",
       },
     ],
@@ -131,45 +146,14 @@ const peopleDirettivo = [
   {
     heading: {
       text: "Eleonora Telasi",
-      image: "/images/direttivo/5.png",
-      alt: "Eleonora",
+      image: "/images/direttivo/direttivo_waiting.png",
+      alt: "Eleonora Telasi",
     },
-
     subtext: "Team Contenuti",
     description: "",
     listItems: [
       {
         url: "https://www.linkedin.com/in/eleonora-telasi-493035259/",
-        icon: "/icons/linkedin.webp",
-      },
-    ],
-  },
-  {
-    heading: {
-      text: "Nicolo Terzoli",
-      image: "/images/direttivo/10.png",
-      alt: "Nicolo Terzoli",
-    },
-    subtext: "Team Progetti",
-    description: "",
-    listItems: [
-      {
-        url: "#",
-        icon: "/icons/linkedin.webp",
-      },
-    ],
-  },
-  {
-    heading: {
-      text: "Gabriele",
-      image: "/images/direttivo/7.png",
-      alt: "Gabriele",
-    },
-    subtext: "Team Eventi",
-    description: "",
-    listItems: [
-      {
-        url: "#",
         icon: "/icons/linkedin.webp",
       },
     ],

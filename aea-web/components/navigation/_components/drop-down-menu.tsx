@@ -36,6 +36,7 @@ import {
   PiTargetLight,
   PiAirplaneTakeoffDuotone,
   PiWineDuotone,
+  PiNewspaperDuotone,
   PiBriefcaseDuotone,
   PiGearDuotone,
 } from "react-icons/pi";
@@ -68,31 +69,32 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               </div>
               <div>Aziende</div>
             </Link>
+
             <Link href={"/progetti"} className="flex" onClick={handleLinkClick}>
               <div>
                 <PiGearDuotone className="h-6 w-6 mr-4 text-rose-400" />
               </div>
-
               <div>Progetti</div>
             </Link>
+
             <Link
-              href={"/blog?tag=news"}
+              href={"/viaggi"}
               className="flex"
               onClick={handleLinkClick}
             >
               <div>
                 <PiWineDuotone className="h-6 w-6 mr-4 text-yellow-400" />
               </div>
-
               <div>Eventi</div>
             </Link>
-            <Link href={"/viaggi"} className="flex" onClick={handleLinkClick}>
-              <div>
-                <PiAirplaneTakeoffDuotone className="h-6 w-6 mr-4 text-violet-400" />
-              </div>
 
-              <div>Viaggi</div>
+            <Link href={"/blog"} className="flex" onClick={handleLinkClick}>
+              <div>
+                <PiNewspaperDuotone className="h-6 w-6 mr-4 text-violet-400" />
+              </div>
+              <div>Blog</div>
             </Link>
+
             <Link
               href={"/blog/?tag=recruitment"}
               className="flex "
@@ -107,25 +109,7 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
           </AccordionContent>
         </AccordionItem>
       </Accordion>
-      <Link
-        href={"/blog"}
-        onClick={handleLinkClick}
-        className="
-            flex
-            flex-1
-            items-center 
-            justify-between
-            border-b
-          
-         
-            py-4
-          
-      
-            "
-      >
-        Blog
-      </Link>
-
+    
       <Link
         href={"/contact"}
         onClick={handleLinkClick}

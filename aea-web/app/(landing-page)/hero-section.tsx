@@ -226,15 +226,11 @@ const HeroSection = () => {
             "
           />
           <div className="mt-5">
-            <Link href={`/${activeTab.name.toLowerCase()}`}>
-              <div className="flex items-center text-blue-600">
-                Scopri <PiArrowRight className="ml-1 text-sm" />
-              </div>
-            </Link>
+           {activeTab.more}
           </div>
         </div>
       )}
-    </div>
+      </div>
   </div>
 ) : (
 
