@@ -25,7 +25,7 @@ const SecondSection = () => {
       </div>
       <div>
         <Link
-          href="/blog?tag=news"
+          href="/aziende"
           className="flex items-center text-sky-500 hover:underline hover:cursor-pointer"
         >
           Scopri

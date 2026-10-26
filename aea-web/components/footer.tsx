@@ -30,22 +30,35 @@ const Footer = () => {
         <div className="flex-col space-y-6 ">
           <div className="pt-10 font-medium">SITO</div>
           <div className="space-y-4 text-sm font-light">
+
             <Link href="/">
               <div>Home</div>
             </Link>
+
             <div></div>
+
             <Link href="/aziende">
               <div>Aziende</div>
             </Link>
+
             <div></div>
+
             <Link href="/progetti">
               <div>Progetti</div>
             </Link>
+
             <div></div>
+
             <Link href="/viaggi">
-              <div>Viaggi</div>
+              <div>Eventi</div>
             </Link>
-            <div>Eventi</div>
+
+            <div> </div>
+
+            <Link href="/blog">
+              <div>Blog</div>
+            </Link>
+
           </div>
         </div>
 
