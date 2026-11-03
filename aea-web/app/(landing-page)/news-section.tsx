@@ -30,9 +30,9 @@ export default async function NewsSection() {
   />
 </div>
 
-{/* Right Cell - ./News Text (1/3) */}
+{/* Right Cell - News Text (1/3) */}
 <div className="flex-1 font-bold flex justify-center items-center">
-  <span className="text-7xl md:text-8xl xl:text-9xl">./News</span>
+  <span className="text-7xl md:text-8xl xl:text-9xl">News</span>
 </div>
 
       {/* Additional Content (Product Tags and Carousel) */}
