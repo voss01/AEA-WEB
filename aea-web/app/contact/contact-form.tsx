@@ -288,7 +288,7 @@ export default function ContactForm() {
                 />
 
                 <div className="text-gray-500 font-light  text-center justify-center mx-auto py-10">
-                  La tua richiesta è stata inviata correttamente!
+                  La tua richiesta è stata inviata correttamente!!!
                 </div>
               </div>
             </div>
