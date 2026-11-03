@@ -12,7 +12,7 @@ export default function ProductTags() {
   const pathname = usePathname(); // Get the current path
 
   // Modify the setFilter function based on the pathname
-  const setFilter = (tag: string) => {
+  const setFilter = (selectedTag: string) => {
     const basePath = pathname === "/" ? "/" : "/blog";
 
     if (selectedTag) {
