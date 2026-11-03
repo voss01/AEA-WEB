@@ -33,8 +33,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { PiCheckLight } from "react-icons/pi";
 
 const FormSchema = z.object({
-  first_name: z.string().trim().min(1).regex(/^[\p{L}\s]+$/u),
-  last_name: z.string().trim().min(1).regex(/^[\p{L}\s]+$/u),
+  first_name: z.string().trim().min(1),
+  last_name: z.string().trim().min(1),
   email: z.string().trim().min(1).email(),
   company_name: z.string().trim().min(1),
   help: z.enum([
