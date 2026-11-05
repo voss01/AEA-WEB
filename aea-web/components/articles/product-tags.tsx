@@ -7,15 +7,16 @@ import { useRouter, useSearchParams, usePathname } from "next/navigation";
 export default function ProductTags() {
   const router = useRouter();
   const params = useSearchParams();
-  const tag = params.get("tag");
+  const rawTag = params.get("tag");
+  const tag = rawTag ? decodeURIComponent(rawTag).trim() : null;
   const pathname = usePathname(); // Get the current path
 
   // Modify the setFilter function based on the pathname
-  const setFilter = (tag: string) => {
+  const setFilter = (selectedTag: string) => {
     const basePath = pathname === "/" ? "/" : "/blog";
 
-    if (tag) {
-      router.push(`${basePath}?tag=${tag}#articles-carousel`);
+    if (selectedTag) {
+      router.push(`${basePath}?tag=${encodeURIComponent(selectedTag)}#articles-carousel`);
     } else {
       router.push(`${basePath}#articles-carousel`);
     }
@@ -34,13 +35,13 @@ export default function ProductTags() {
           All
         </Badge>
         <Badge
-          onClick={() => setFilter("news")}
+          onClick={() => setFilter("latests news")}
           className={cn(
-            "cursor-pointer bg-orange-500 hover:bg-orange-600 hover:opacity-100",
-            tag === "news" && tag ? "opacity-100" : "opacity-50"
+            "cursor-pointer bg-orange-500 hover:bg-orange-600hover:opacity-100",
+            tag === "latests news" && tag ? "opacity-100" : "opacity-50"
           )}
         >
-          news
+          latests news
         </Badge>
         <Badge
           onClick={() => setFilter("recruitment")}
@@ -50,6 +51,15 @@ export default function ProductTags() {
           )}
         >
           recruitment
+        </Badge>
+        <Badge
+          onClick={() => setFilter("new events")}
+          className={cn(
+            "cursor-pointer bg-yellow-500 hover:bg-yellow-600 hover:opacity-100",
+            tag === "new events" && tag ? "opacity-100" : "opacity-50"
+          )}
+        >
+          new events
         </Badge>
       </div>
     </section>

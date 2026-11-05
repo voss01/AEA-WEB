@@ -11,6 +11,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Link from "next/link"
 
 const font = Lora({
   subsets: ["latin"],
@@ -193,9 +194,17 @@ const SixthSection = () => {
         <div className="px-10 py-4 text-center xl:w-1/2 2xl:w-1/3 md:w-2/3">
           Cerchiamo di innovare e creare nuove opportunità ogni giorno.
         </div>
-        <div className="flex items-center text-sky-500 hover:underline hover:cursor-pointer">
-          Scopri <PiArrowRight className="ml-3 text-sm " />
+        <div>
+        <Link
+          href="/progetti"
+         className="flex items-center text-sky-500 hover:underline"
+        >
+          Scopri 
+          {/*<PiArrowRight className="ml-3 text-sm " />*/}
+         
+        </Link>
         </div>
+        
         <div className="grid grid-cols-12 md:row-span-2 gap-4 xl:gap-6 mt-8 px-8 xl:px-0 xl:w-3/4 2xl:w-[55%] mx-auto md:w-full">
           {tabs.map((tab, index) => (
             <div
