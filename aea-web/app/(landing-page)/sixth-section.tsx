@@ -199,8 +199,8 @@ const SixthSection = () => {
           href="/progetti"
          className="flex items-center text-sky-500 hover:underline"
         >
-          Scopri 
-          {/*<PiArrowRight className="ml-3 text-sm " />*/}
+          Scopri
+          <PiArrowRight className="ml-3 text-sm " />
          
         </Link>
         </div>

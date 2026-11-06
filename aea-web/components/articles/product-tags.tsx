@@ -44,22 +44,22 @@ export default function ProductTags() {
           latests news
         </Badge>
         <Badge
-          onClick={() => setFilter("recruitment")}
-          className={cn(
-            "cursor-pointer bg-red-500 hover:bg-red-600 hover:opacity-100",
-            tag === "recruitment" && tag ? "opacity-100" : "opacity-50"
-          )}
-        >
-          recruitment
-        </Badge>
-        <Badge
           onClick={() => setFilter("new events")}
           className={cn(
-            "cursor-pointer bg-yellow-500 hover:bg-yellow-600 hover:opacity-100",
+            "cursor-pointer bg-red-500 hover:bg-red-600 hover:opacity-100",
             tag === "new events" && tag ? "opacity-100" : "opacity-50"
           )}
         >
           new events
+        </Badge>
+        <Badge
+          onClick={() => setFilter("recruitment")}
+          className={cn(
+            "cursor-pointer bg-yellow-500 hover:bg-yellow-600 hover:opacity-100",
+            tag === "recruitment" && tag ? "opacity-100" : "opacity-50"
+          )}
+        >
+          recruitment
         </Badge>
       </div>
     </section>
