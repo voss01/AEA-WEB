@@ -2,36 +2,30 @@
 import Image from "next/image";
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
+import F11 from "/public/assets/ArmAi/2.jpg";
+import F12 from "/public/assets/ArmAi/4.gif";
+import F13 from "/public/assets/ArmAi/5.jpg";
+import F14 from "/public/assets/ArmAi/6.jpg";
+import F15 from "/public/assets/ArmAi/1.jpg";
+import F16 from "/public/assets/ArmAi/3.jpg";
 
-import F11 from "/public/assets/Falco/1.jpg";
-import F12 from "/public/assets/Falco/2.jpg";
-import F13 from "/public/assets/Falco/3.jpg";
-import F14 from "/public/assets/Falco/4.gif";
-
-import F15 from "/public/assets/Falco/5.jpg";
-import F16 from "/public/assets/Falco/6.jpg";
-export const Drone = () => {
+export const SoArm = () => {
   const data = [
     {
-      title: "Meccanica",
+      title: "3D Printing",
       content: (
         <div>
           <h1 className="text-black text-2xl md:text-4xl font-bold mb-4">
-            Progettazione meccanica e setup elettronico
+            Il progetto
           </h1>
           <p className="text-sm md:text-base text-neutral-800 mb-4">
-            Abbiamo progettato l’hardware del quadricottero FALCO e configurato
-            l’elettronica di bordo: telaio, power train, ESC, distribuzione di
-            potenza e sensori principali (IMU, barometro, GNSS). Il wiring è
-            stato organizzato per manutenzione rapida e riduzione del rumore
-            elettrico, con particolare attenzione a massa, filtraggio e
-            sicurezza.
+            SO-ARM nasce come iniziativa open–source con l’obiettivo di
+            realizzare un braccio robotico accessibile ma al tempo stesso
+            robusto. Il design modulare consente a studenti e ricercatori di
+            comprendere a fondo la cinematica e la dinamica di un manipolatore,
+            offrendo una piattaforma su cui sperimentare con controllo,
+            teleoperazione e robotica collaborativa.
           </p>
-          <ul className="list-disc pl-5 text-sm md:text-base text-neutral-800 space-y-1 mb-6">
-            <li>Scelta motori/prop & dimensionamento batteria</li>
-            <li>ESC calibrati e schema PDB con protezioni</li>
-            <li>Integrazione IMU/Baro/GNSS e bus di comunicazione</li>
-          </ul>
 
           <div className="grid grid-cols-2 gap-4">
             <Image
@@ -54,25 +48,22 @@ export const Drone = () => {
     },
 
     {
-      title: "Controllo",
+      title: "Elettronica",
       content: (
         <div>
           <h1 className="text-black text-2xl md:text-4xl font-bold mb-8">
-            Test algoritmi base: PID di posizione e velocità
+            Dal modello al prototipo
           </h1>
           <div>
-            <h1 className="text-black text-2xl md:text-4xl font-bold mb-4"></h1>
             <p className="text-sm md:text-base text-neutral-800 mb-4">
-              Su piattaforma Teensy abbiamo implementato e testato algoritmi di
-              controllo classici (PID) per attitude, rate e quota. Il tuning è
-              stato eseguito iterativamente (Ziegler–Nichols/loop shaping) con
-              logging ad alta frequenza e verifica su banco prova.
+              Una volta definito il design, il progetto si concretizza nella
+              costruzione del braccio: strutture leggere e stampabili, giunti
+              equipaggiati con servomotori e schede di controllo per la gestione
+              in tempo reale. Questa fase non è soltanto assemblaggio, ma anche
+              scoperta: collaudare il prototipo significa confrontarsi con
+              problematiche reali come attriti, tolleranze e calibrazione dei
+              sensori.
             </p>
-            <ul className="list-disc pl-5 text-sm md:text-base text-neutral-800 space-y-1 mb-6">
-              <li>Loop rate deterministico e scheduler leggero</li>
-              <li>Filtri su sensori (LPF/complimentary) e anti-windup</li>
-              <li>Test step/ramp, risposta a disturbi e RTH simulato</li>
-            </ul>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Image
@@ -94,26 +85,26 @@ export const Drone = () => {
       ),
     },
     {
-      title: "Robotics AI",
+      title: "Controllo e AI",
       content: (
         <div>
           <h1 className="text-black text-2xl md:text-4xl font-bold mb-8">
-            Algoritmi di depth estimation per autonomia
+            Teleop, training e simulazione
           </h1>
           <div>
             <p className="text-sm md:text-base text-neutral-800 mb-4">
-              Abbiamo sviluppato algoritmi di depth estimation per la
-              comprensione 3D dell’ambiente: stereo/monocular depth e fusione
-              con IMU per mappe di densità utili ad obstacle avoidance e
-              path-planning. Il risultato: traiettorie più sicure e volo
-              maggiormente autonomo.
+              SO-ARM non è solo un braccio robotico, ma una piattaforma aperta
+              alla comunità. Viene utilizzato come banco di prova per algoritmi
+              di controllo avanzato, teleoperazione leader–follower,
+              integrazione con ROS2 e persino esperimenti di machine learning
+              per la manipolazione autonoma. L’obiettivo è stimolare ricerca,
+              collaborazione e formazione, aprendo la strada a nuove
+              applicazioni nella robotica collaborativa.
             </p>
             <ul className="list-disc pl-5 text-sm md:text-base text-neutral-800 space-y-1 mb-6">
-              <li>Pipeline di disparity / monocular depth con smoothing</li>
-              <li>Fusione sensori e stima di scala con dati di moto</li>
-              <li>
-                Cost map 3D → planner locale e limiti di velocità adattivi
-              </li>
+              <li>LeRobot: tutorial end-to-end per SO-101</li>
+              <li>Teleop, replay, policy learning</li>
+              <li>ROS2/MoveIt e simulazione (facoltativi)</li>
             </ul>
           </div>
           <div className="grid grid-cols-2 gap-4">
@@ -142,9 +133,9 @@ export const Drone = () => {
       <div className="container"></div>
 
       <div className="w-full">
-        <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 text-center">
+        <div className="max-w-7xl mx-auto py-10 pb-0 px-4 md:px-8 lg:px-10 text-center">
           <div className="flex-1 font-bold flex justify-center items-center">
-            <span className="text-7xl md:text-8xl xl:text-9xl">./FALCO</span>
+            <span className="text-7xl md:text-8xl xl:text-9xl">SO-ARM</span>
           </div>
         </div>
         <Timeline data={data} />
