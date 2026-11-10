@@ -167,7 +167,7 @@ const tabs = [
     subtext: "associati",
   },
   {
-    text: "4",
+    text: "7",
     subtext: "progetti in corso",
   },
   {

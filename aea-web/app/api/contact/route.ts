@@ -81,7 +81,7 @@ const resend = new Resend(apiKey);
 
 const { data, error } = await resend.emails.send({
   from: "Sito Web <noreply@aeapolimi.it>",
-  to: ["massimiliano.menzolini@aeapolimi.it"],
+  to: ["massimiliano.menzolini@aeapolimi.it", "giacomo.monaco@aeapolimi.it"], //indirizzi mail a cui arriva la risposta del form
   replyTo: email,
   subject: "RICHIESTA CONTATTA DA AZIENDA",
   text: testoEmail,
