@@ -18,7 +18,7 @@ export const Drift = () => {
           <h1 className="text-black text-2xl md:text-4xl font-bold mb-4">
             Banco di prova per droni autonomi
           </h1>
-          <p className="text-sm md:text-base text-neutral-800 mb-4">
+          <p className="text-sm md:text-base text-neutral-800 mb-4 text-justify">
             In collaborazione con il Prof. L.M. Fagiano, stiamo sviluppando una
             struttura attuata dedicata al test di droni di media/grossa taglia.
             L’obiettivo iniziale è costruire un banco sperimentale sicuro, con
@@ -59,7 +59,7 @@ export const Drift = () => {
             Sviluppo algoritmi di controllo
           </h1>
           <div>
-            <p className="text-sm md:text-base text-neutral-800 mb-4">
+            <p className="text-sm md:text-base text-neutral-800 mb-4 text-justify">
               La seconda fase si concentra sulla progettazione e implementazione
               di controllori per mantenere stabile il drone durante i test.
               Utilizziamo MATLAB/Simulink per modellazione, simulazioni e tuning
@@ -99,7 +99,7 @@ export const Drift = () => {
             Integrazione di algoritmi avanzati
           </h1>
           <div>
-            <p className="text-sm md:text-base text-neutral-800 mb-4">
+            <p className="text-sm md:text-base text-neutral-800 mb-4 text-justify">
               Una volta consolidata la parte di controllo classico, il progetto
               prevede l’integrazione di modelli di Machine Learning e
               Reinforcement Learning per rendere i droni capaci di adattarsi a

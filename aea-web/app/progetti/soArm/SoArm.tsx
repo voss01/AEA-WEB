@@ -18,7 +18,7 @@ export const SoArm = () => {
           <h1 className="text-black text-2xl md:text-4xl font-bold mb-4">
             Il progetto
           </h1>
-          <p className="text-sm md:text-base text-neutral-800 mb-4">
+          <p className="text-sm md:text-base text-neutral-800 mb-4 text-justify">
             SO-ARM nasce come iniziativa open–source con l’obiettivo di
             realizzare un braccio robotico accessibile ma al tempo stesso
             robusto. Il design modulare consente a studenti e ricercatori di
@@ -55,7 +55,7 @@ export const SoArm = () => {
             Dal modello al prototipo
           </h1>
           <div>
-            <p className="text-sm md:text-base text-neutral-800 mb-4">
+            <p className="text-sm md:text-base text-neutral-800 mb-4 text-justify">
               Una volta definito il design, il progetto si concretizza nella
               costruzione del braccio: strutture leggere e stampabili, giunti
               equipaggiati con servomotori e schede di controllo per la gestione
@@ -92,7 +92,7 @@ export const SoArm = () => {
             Teleop, training e simulazione
           </h1>
           <div>
-            <p className="text-sm md:text-base text-neutral-800 mb-4">
+            <p className="text-sm md:text-base text-neutral-800 mb-4 text-justify">
               SO-ARM non è solo un braccio robotico, ma una piattaforma aperta
               alla comunità. Viene utilizzato come banco di prova per algoritmi
               di controllo avanzato, teleoperazione leader–follower,

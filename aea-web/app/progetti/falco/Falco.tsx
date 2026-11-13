@@ -18,7 +18,7 @@ export const Falco = () => {
           <h1 className="text-black text-2xl md:text-4xl font-bold mb-4">
             Progettazione meccanica e setup elettronico
           </h1>
-          <p className="text-sm md:text-base text-neutral-800 mb-4">
+          <p className="text-sm md:text-base text-neutral-800 mb-4 text-justify">
             Abbiamo progettato l’hardware del quadricottero FALCO e configurato
             l’elettronica di bordo: telaio, power train, ESC, distribuzione di
             potenza e sensori principali (IMU, barometro, GNSS). Il wiring è
@@ -61,7 +61,7 @@ export const Falco = () => {
           </h1>
           <div>
             <h1 className="text-black text-2xl md:text-4xl font-bold mb-4"></h1>
-            <p className="text-sm md:text-base text-neutral-800 mb-4">
+            <p className="text-sm md:text-base text-neutral-800 mb-4 text-justify">
               Su piattaforma Teensy abbiamo implementato e testato algoritmi di
               controllo classici (PID) per attitude, rate e quota. Il tuning è
               stato eseguito iterativamente (Ziegler–Nichols/loop shaping) con
@@ -100,7 +100,7 @@ export const Falco = () => {
             Algoritmi di depth estimation per autonomia
           </h1>
           <div>
-            <p className="text-sm md:text-base text-neutral-800 mb-4">
+            <p className="text-sm md:text-base text-neutral-800 mb-4 text-justify">
               Abbiamo sviluppato algoritmi di depth estimation per la
               comprensione 3D dell’ambiente: stereo/monocular depth e fusione
               con IMU per mappe di densità utili ad obstacle avoidance e

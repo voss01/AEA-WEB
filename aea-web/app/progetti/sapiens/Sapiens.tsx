@@ -17,7 +17,7 @@ export const Sapiens = () => {
           <h1 className="text-black text-2xl md:text-4xl font-bold mb-4">
             Struttura della protesi e setup elettronico
           </h1>
-          <p className="text-sm md:text-base text-neutral-800 mb-4">
+          <p className="text-sm md:text-base text-neutral-800 mb-4 text-justify">
             Il team SAPIENS ha iniziato con la progettazione meccanica della
             mano robotica, dalle dita al palmo, fino al layout dei componenti.
             In parallelo il gruppo elettronica ha sviluppato i PCB e selezionato
@@ -58,7 +58,7 @@ export const Sapiens = () => {
             Sistema di controllo e interfaccia robotica
           </h1>
           <div>
-            <p className="text-sm md:text-base text-neutral-800 mb-4">
+            <p className="text-sm md:text-base text-neutral-800 mb-4 text-justify">
               Successivamente ci siamo concentrati sullo sviluppo software: dal
               controllo dei motori con algoritmi FOC fino all’integrazione con
               ROS2 per la gestione in tempo reale dei comandi. L’attenzione si è
@@ -98,7 +98,7 @@ export const Sapiens = () => {
             Interpretazione dei segnali neurali e muscolari
           </h1>
           <div>
-            <p className="text-sm md:text-base text-neutral-800 mb-4">
+            <p className="text-sm md:text-base text-neutral-800 mb-4 text-justify">
               La fase più avanzata del progetto riguarda l’interfacciamento con
               l’utente. I sottoteam EEG ed EMG hanno lavorato per tradurre i
               segnali cerebrali e muscolari in comandi reali della mano, usando

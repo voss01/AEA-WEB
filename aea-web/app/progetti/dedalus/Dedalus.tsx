@@ -18,7 +18,7 @@ export const Dedalus = () => {
           <h1 className="text-black text-2xl md:text-4xl font-bold mb-4">
             Strutture meccaniche, sensori e alimentazione
           </h1>
-          <p className="text-sm md:text-base text-neutral-800 mb-4">
+          <p className="text-sm md:text-base text-neutral-800 mb-4 text-justify">
             SpotMicro nasce dall’unione di meccanica ed elettronica: abbiamo
             progettato il telaio e i cinematismi delle zampe ispirati al design
             di Spot, realizzando i prototipi in stampa 3D. In parallelo, il
@@ -60,7 +60,7 @@ export const Dedalus = () => {
             Gait, coordinazione dei movimenti e sensor fusion
           </h1>
           <div>
-            <p className="text-sm md:text-base text-neutral-800 mb-4">
+            <p className="text-sm md:text-base text-neutral-800 mb-4 text-justify">
               Il team software sviluppa gli algoritmi di controllo del
               quadrupede: generazione dei gait (trot, crawl, bound),
               pianificazione di appoggi e coordinazione degli arti. Con ROS2
@@ -101,7 +101,7 @@ export const Dedalus = () => {
             Percezione dell’ambiente e adattamento al terreno
           </h1>
           <div>
-            <p className="text-sm md:text-base text-neutral-800 mb-4">
+            <p className="text-sm md:text-base text-neutral-800 mb-4 text-justify">
               Verso l’autonomia completa: integriamo stack di percezione e
               navigazione per muoverci in sicurezza in ambienti diversi. Dalla
               mappatura locale alla pianificazione del percorso, fino a tecniche
