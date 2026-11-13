@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 import { Timeline } from "@/components/ui/timeline";
+import { GoArrowLeft } from "react-icons/go";
 import F11 from "/public/assets/Spot/1.jpg";
 import F12 from "/public/assets/Spot/2.jpg";
 import F13 from "/public/assets/Spot/3.jpg";
@@ -137,7 +139,16 @@ export const Dedalus = () => {
 
   return (
     <section>
-      <div className="container"></div>
+            <div className="container pt-6 px-4 md:px-8 lg:px-10 mx-auto">
+  <Link
+    href="/progetti"
+    className="inline-flex items-center justify-center p-2 rounded-full hover:bg-neutral-100 transition-colors text-[#ea580c]"
+    aria-label="Torna ai progetti"
+  >
+    {/* w-7 h-7 per smartphone, md:w-10 md:h-10 per PC/tablet */}
+    <GoArrowLeft className="w-9 h-9 md:w-14 md:h-14" />
+  </Link>
+</div>
       <div className="w-full">
         <div className="max-w-7xl mx-auto py-10 pb-0 px-4 md:px-8 lg:px-10 text-center">
           <div className="flex-1 font-bold flex justify-center items-center">
