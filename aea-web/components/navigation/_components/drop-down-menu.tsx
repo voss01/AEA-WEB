@@ -78,7 +78,7 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
             </Link>
 
             <Link
-              href={"/viaggi"}
+              href={"/eventi"}
               className="flex"
               onClick={handleLinkClick}
             >

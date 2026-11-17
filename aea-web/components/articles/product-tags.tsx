@@ -35,13 +35,13 @@ export default function ProductTags() {
           All
         </Badge>
         <Badge
-          onClick={() => setFilter("latests news")}
+          onClick={() => setFilter("latest news")}
           className={cn(
             "cursor-pointer bg-orange-500 hover:bg-orange-600hover:opacity-100",
-            tag === "latests news" && tag ? "opacity-100" : "opacity-50"
+            tag === "latest news" && tag ? "opacity-100" : "opacity-50"
           )}
         >
-          latests news
+          latest news
         </Badge>
         <Badge
           onClick={() => setFilter("new events")}
