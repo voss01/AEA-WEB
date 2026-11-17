@@ -22,10 +22,10 @@ export default async function LandingPage() {
     <div className="">
       
       <div className="mt-6 mb-6 flex-1 text-5xl font-bold xl:text-7xl flex justify-center items-center">
-          Latests News
+          Latest News
         </div>
            <div className="border-t border-gray-600 mb-2"></div>
-            <ProductsCarousel variants={data} tag="latests news" />
+            <ProductsCarousel variants={data} tag="latest news" />
             <div className="border-t  border-gray-600 mb-2"></div>
     
       <div className="mt-6 mb-6 flex-1 text-5xl font-bold xl:text-7xl flex justify-center items-center">

@@ -1,7 +1,7 @@
 import DinoGame from "@/components/dinoGame";
-import { GlobeDemo } from "./viaggi-content";
+import { GlobeDemo } from "./eventi-content";
 
-const Viaggi = () => {
+const Eventi = () => {
   return (
     <>
     {
@@ -11,4 +11,4 @@ const Viaggi = () => {
   );
 };
 
-export default Viaggi;
+export default Eventi;

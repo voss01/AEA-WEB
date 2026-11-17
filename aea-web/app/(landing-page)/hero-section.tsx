@@ -65,13 +65,13 @@ const tabs = [
     feature: "rimborsati", //cos'e???
     description: "Tanti eventi da scoprire",
     more: (
-      <Link href="/viaggi">
+      <Link href="/eventi">
       <div className="flex items-center text-purple-600">
         Scopri <PiArrowRight className="ml-1 text-sm" />
       </div>
       </Link>
     ),
-    image: "/assets/viaggi.jpeg",
+    image: "/assets/eventi.jpeg",
   },
 
   {
