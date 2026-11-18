@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-
 import { Button } from "@/components/ui/button";
-
 import { X, AlignJustify } from "lucide-react";
 import Link from "next/link";
 import DropdownMenu from "./drop-down-menu";
+// Importiamo la Server Action sicura che avvia il login su Microsoft Azure
+import { loginWithAzure } from "@/lib/auth-actions";
 
 const ActionButtons = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -22,26 +22,22 @@ const ActionButtons = () => {
   return (
     <div className="pr-2">
       <div className="flex items-center justify-center ">
+        <div className="flex items-center pr-4 lg:space-x-4">
+          {/* Form collegato alla Server Action: al click reindirizza a Microsoft Entra ID */}
+          <form action={loginWithAzure} className="flex gap-2">
+            <Button
+              type="submit"
+              variant={"outline"}
+              className="items-center hidden border-none lg:flex text-md"
+            >
+              Log in
+            </Button>
+          </form>
 
-      
-
-      <div className="flex items-center pr-4 lg:space-x-4">
-      <Link className="flex gap-2" href="/auth/login">
-                  
-          <Button
-            variant={"outline"}
-            className="items-center hidden border-none lg:flex text-md"
-          >
-            Log in
-          </Button>
-        </Link>
-        <Link href={"/welcome"}>
-          <Button
-          className="hidden lg:block"
-          
-          >Join us</Button>
-        </Link>
-      </div>
+          <Link href={"/welcome"}>
+            <Button className="hidden lg:block">Join us</Button>
+          </Link>
+        </div>
       </div>
 
       {isDropdownVisible && (

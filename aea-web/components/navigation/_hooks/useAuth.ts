@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { auth } from '@/server/auth'; // O la tua funzione di autenticazione
+import { auth } from '@/auth'; // O la tua funzione di autenticazione
 import { Session } from "next-auth";  // Assicurati di importare il tipo corretto
 
 const useAuth = () => {

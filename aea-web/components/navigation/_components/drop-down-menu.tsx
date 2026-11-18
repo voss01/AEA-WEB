@@ -1,40 +1,14 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
+import { loginWithAzure } from "@/lib/auth-actions";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
+import { UserPlus } from "lucide-react";
 import {
-  BarChart,
-  Building2,
-  Code,
-  Code2Icon,
-  DollarSign,
-  Download,
-  GraduationCap,
-  Headphones,
-  Home,
-  Newspaper,
-  PaintBucket,
-  Settings,
-  Smile,
-  Sparkles,
-  ScreenShare,
-  Users,
-  UserPlus,
- 
-} from "lucide-react";
-import {
-  PiArrowRight,
-  PiBookOpenTextLight,
-  PiFileThin,
-  PiSparkleLight,
-  PiTargetLight,
-  PiAirplaneTakeoffDuotone,
   PiWineDuotone,
   PiNewspaperDuotone,
   PiBriefcaseDuotone,
@@ -51,15 +25,8 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
   };
 
   return (
-    <div className="w-screen h-screen bg-white  px-4 items-center justify-center absolute  right-0 xl:hidden mt-4">
-      <Accordion
-        defaultValue="item-1"
-        className="
-            pl-2
-            "
-        type="single"
-        collapsible
-      >
+    <div className="w-screen h-screen bg-white px-4 items-center justify-center absolute right-0 xl:hidden mt-4">
+      <Accordion defaultValue="item-1" className="pl-2" type="single" collapsible>
         <AccordionItem className="mt-6 border-b" value="item-1">
           <AccordionTrigger className="">Scopri</AccordionTrigger>
           <AccordionContent defaultValue="item-1" className="space-y-2">
@@ -77,11 +44,7 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               <div>Progetti</div>
             </Link>
 
-            <Link
-              href={"/viaggi"}
-              className="flex"
-              onClick={handleLinkClick}
-            >
+            <Link href={"/viaggi"} className="flex" onClick={handleLinkClick}>
               <div>
                 <PiWineDuotone className="h-6 w-6 mr-4 text-yellow-400" />
               </div>
@@ -97,65 +60,45 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
 
             <Link
               href={"/blog/?tag=recruitment"}
-              className="flex "
+              className="flex"
               onClick={handleLinkClick}
             >
               <div>
                 <UserPlus className="h-6 w-6 mr-4 text-green-400" />
               </div>
-
               <div>Ultimi recruitment</div>
             </Link>
           </AccordionContent>
         </AccordionItem>
       </Accordion>
-    
+
       <Link
         href={"/contact"}
         onClick={handleLinkClick}
-        className="
-            flex
-            flex-1
-            items-center 
-            justify-between
-            border-b
-          
-         
-            py-4
-          
-      
-            "
+        className="flex flex-1 items-center justify-between border-b py-4"
       >
         Contattaci
       </Link>
 
       <div className="pt-12">
-        <div className="  space-y-4 flex flex-col px-4">
-          <Link
-            href={
-              "/welcome"
-            }
-          >
-            <Button
-              className="
-              w-full
-                  
-                        "
-              onClick={handleLinkClick}
-            >
+        <div className="space-y-4 flex flex-col px-4">
+          <Link href={"/welcome"}>
+            <Button className="w-full" onClick={handleLinkClick}>
               Join us
             </Button>
           </Link>
 
-          <Link href={"/auth/login"}>
+          {/* Form collegato alla Server Action di Microsoft Azure anche su mobile */}
+          <form action={loginWithAzure} className="w-full">
             <Button
+              type="submit"
               variant={"outline"}
               className="w-full"
               onClick={handleLinkClick}
             >
               Log in
             </Button>
-          </Link>
+          </form>
         </div>
       </div>
     </div>
