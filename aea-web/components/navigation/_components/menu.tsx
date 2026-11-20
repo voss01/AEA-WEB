@@ -104,7 +104,7 @@ export function Menu() {
                 <div className="flex items-center gap-1 p-1 rounded-sm hover:bg-gray-400/10">
                   <PiWineDuotone className="mr-2 text-2xl text-yellow-600" />
                   <div className="">
-                    <Link href={"/viaggi"}>
+                    <Link href={"/eventi"}>
                       <a>Eventi</a>
                       <p className="text-sm font-light text-gray-400">
                         Tanti eventi da scoprire
