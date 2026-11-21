@@ -1,17 +1,13 @@
-import type { Metadata } from "next";
-import { JetBrains_Mono, Mulish} from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { JetBrains_Mono, Mulish } from "next/font/google";
 import "./globals.css";
-
 import Nav from "@/components/navigation/nav";
-import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/providers/theme-provider";
 import Toaster from "@/components/ui/toaster";
-import type { Viewport } from "next";
 import Footer from "@/components/footer";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import LayoutShell from "@/components/navigation/layout-shell";
 
-//fonts
 const font_main = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400"],
@@ -22,7 +18,6 @@ const font_secondary = Mulish({
   weight: ["400"],
   variable: "--font-secondary",
 });
-
 
 export const metadata: Metadata = {
   title: "Aea polimi",
@@ -35,11 +30,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Aea polimi",
     description: "Automation engineering association",
-    url: "https://aeapolimi.it", // replace with your real domain
+    url: "https://aeapolimi.it",
     siteName: "Aea polimi",
     images: [
       {
-        url: "/logos/aea-logo.png", // put a 1200x630 image in /public/logos
+        url: "/logos/aea-logo.png",
         width: 1200,
         height: 630,
         alt: "Aea polimi logo",
@@ -71,13 +66,15 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${font_main.variable} ${font_secondary.variable}`}>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <Nav />
         <Toaster />
 
-        {children}
+        {/* LayoutShell nasconde automaticamente Nav e Footer nelle rotte /dashboard */}
+        <LayoutShell nav={<Nav />} footer={<Footer />}>
+          {children}
+        </LayoutShell>
+
         <Analytics />
         <SpeedInsights />
-        <Footer />
       </body>
     </html>
   );
